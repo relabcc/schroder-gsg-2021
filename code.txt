@@ -1,0 +1,11 @@
+<div id="gci2020-tw-root">
+<div>　</div>
+
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/runtime-main.ff98e14f.js"></script>
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/4.4197c50a.chunk.js"></script>
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/main.fa6e8246.chunk.js"></script>
+<script>
+setTimeout(function() { window.injectCSS("/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/css/1.5c17b9f1.chunk.css") })
+</script>
+<div>　</div>
+</div>

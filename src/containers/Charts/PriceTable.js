@@ -26,15 +26,14 @@ const PriceTable = ({ isMobile }) => {
         if (!data.length) return null
         const table = names.map((name) => [name, data[0][name], data[1][name], data[2][name], data[3][name]])
         const note = get(data, [4, names[0]])
-        // console.log(table)
-
         const priceData = {
           th: [...table.map(d => d[0])],
-          tbody: range((table[0].length - 1)).map(index => [...table.map(d => d[index + 1])])
+          tbody: range((table[0].length - 1)).map(index => [...table.map(d => d[index + 1])]),
+          color: ['darkBlue', 'darkBlue', 'black', 'textGreen']
         }
         const priceDataMobile= {
-          th: table[0],
-          tbody: table.slice(1),
+          th: [...table[0].slice(0, 2), ...table[0].slice(3)],
+          tbody: table.slice(1).map(d => [...d.slice(0, 2), ...d.slice(3)])
         }
         // ['累積報酬, \n美元報酬 \n(%)', '施羅德(環)\n環球永續增長', '四分位\n排名', '同類型基金平均\n(86檔)', 'MSCI AC World Index'],
         return (

@@ -46,6 +46,7 @@ const data = [
     src: icon2_1,
     vertical: true,
     leftWidth: responsive('100%', '10%'),
+    logoWidth: responsive('50%', '100%'),
     content: [
       [
         {
@@ -117,7 +118,7 @@ const Feature = ({ innerRef }) => {
         <Text.Title>施羅德(環)環球永續增長基金三大特色</Text.Title>
         <Module content={sets} />
       </Container>
-      {data.map(({ title, step, src, subTitle, text, vertical, leftWidth, content }, i) => (
+      {data.map(({ title, step, src, subTitle, text, vertical, leftWidth, logoWidth, content }, i) => (
         <Box key={i}>
           <Title title={title} src={src} step={step}  />
           <Container py="2em">
@@ -125,7 +126,7 @@ const Feature = ({ innerRef }) => {
             {content.map((d, i) => isArray(d) ? (
               <Box mt={i && responsive('1em', '2em')}>
                 {subTitle && <Text.SubTitle>({i + 1}){subTitle[i]}</Text.SubTitle>}
-                <Module content={d} vertical={vertical} leftWidth={leftWidth} />
+                <Module content={d} vertical={vertical} leftWidth={leftWidth} logoWidth={logoWidth} />
               </Box>
             ) : (
               <Box mt={i && responsive('1em', '2em')}>

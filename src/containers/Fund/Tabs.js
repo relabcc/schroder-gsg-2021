@@ -18,6 +18,7 @@ import Price from '../Charts/Price'
 import PriceTable from '../Charts/PriceTable'
 import USDividendsTable from '../Charts/USDividendsTable'
 import SADividendsTable from '../Charts/SADividendsTable'
+import BarChart from '../Charts/BarChart';
 
 const StyledTabs = styled(Tabs)`
 position: relative;
@@ -51,10 +52,10 @@ const sets = [
   {
     name: '投資組合',
     data: [
-      // {
-      //   title: '國家分佈',
-      //   Comp: (props) => <Allocation {...props} index={0} />,
-      // },
+      {
+        title: '產業配置',
+        Comp: (props) => <BarChart {...props} />,
+      },
       // {
       //   title: '債券類別',
       //   Comp: (props) => <Allocation {...props} index={1} fill="bgGreen" />,
@@ -65,7 +66,7 @@ const sets = [
     name: '基金績效',
     data: [
       {
-        title: '基金表現',
+        title: '基金績效',
         Comp: PriceTable,
       },
       // {
@@ -101,15 +102,15 @@ const FundTabs = ({ selectedIndex, onSelect, secPt, sticky }) => {
         </Box>
       </Box>
       <div ref={block}>
-        <Box pt="5rem" fontWeight="bold" fontSize={responsive('1.43em', '2em')} color="prussianBlue">
+        {/* <Box pt="5rem" fontWeight="bold" fontSize={responsive('1.43em', '2em')} color="prussianBlue">
           <Text>施羅德(環)環球收息債券</Text>
           <Text>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</Text>
-        </Box>
+        </Box> */}
         {sets.map(({ data }, i) => (
           <TabPanel key={i}>
             {data.map(({ title, Comp, source }, k) =>(
               <Box key={k}>
-                <Text fontWeight="bold" fontSize={responsive('1.285em', '1.57em')} pt={responsive('5rem', '8rem')} pb="3rem">{title}</Text>
+                <Text fontWeight="bold" fontSize={responsive('1.285em', '1.57em')} pt={responsive('2rem', '5rem')} pb="3rem">{title}</Text>
                 <Comp isMobile={isMobile} />
                 {source && <Source>{source}</Source>}
               </Box>

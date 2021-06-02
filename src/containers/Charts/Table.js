@@ -10,11 +10,11 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
     <Box is="table" fontSize={fontSize}>
       <Box is="thead">
         <Box is="tr">
-          {nowData.th.map((h, i) => (
+          {nowData.th.map((h, i, { length }) => (
             <Box
               is="th"
-              color={getResponsive(i ? 'black' : 'white', 'white')}
-              bg={getResponsive(i ? getStripBg(i + 1) : bg, bg)}
+              color={getResponsive(i ? i == length - 1 ? 'textGreen' : 'black' : 'white', 'white')}
+              bg={getResponsive(i ? 'white' : bg, bg)}
               px="0.5em"
               py="1em"
               textAlign={getResponsive('center', thAlign ? thAlign : i ? 'right' : 'left')}
@@ -27,7 +27,7 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
           ))}
         </Box>
       </Box>
-      {nowData.tbody.map((h, i, { length }) => (
+      {nowData.tbody.map((h, i) => (
         <Box is="tbody" key={i}>
           <Box is="tr">
             {h.map((n, k) => (
@@ -36,10 +36,10 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
                 is="td"
                 px="0.5em"
                 py="1em"
-                bg={getResponsive(k ? getStripBg(k + 1) : bg, 'white')}
-                borderBottom="1px solid"
-                borderColor="darkBlue"
-                color={getResponsive(k ? 'black' : 'white', i == length - 1 ? 'textGreen' : 'black')}
+                fontWeight="bold"
+                bg={getResponsive(k ? 'white' : bg, 'white')}
+                color={getResponsive(k ? k == h.length - 1 ? 'textGreen' : 'black' : 'white', nowData.color[i])}
+                borderBottom={responsive('none', '1px solid black')}
                 textAlign={getResponsive('center', tbodyAlign ? tbodyAlign : k ? 'right' : 'left')}
                 key={k}
               >

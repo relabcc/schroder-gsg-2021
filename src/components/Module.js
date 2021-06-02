@@ -9,10 +9,10 @@ import { responsive } from './ThemeProvider/theme'
 const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => (
   <Flex
     pb="0.5em"
-    mx="-1em"
+    mx={responsive(0, '-1em')}
     alignItems="center"
     mt={responsive('1em', '1.25em')}
-    flexDirection={responsive('colunm', vertical ? 'column' : 'row')}
+    flexDirection={responsive('column', vertical ? 'column' : 'row')}
     {...props}
   >
     {content.map(({ src, title, label, text }, k, { length }) => (
@@ -26,7 +26,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => (
       >
         <Box width={leftWidth} mr={vertical && responsive(0, '2em')}>
           <Text.SubTitle textAlign="center" whiteSpace="pre-wrap">{title}</Text.SubTitle>
-          <Box width={logoWidth} mt="1em">
+          <Box width={logoWidth || '50%'} mx="auto" mt="1em">
             <Image src={src} />
           </Box>
           {label && <Text.SubTitle textAlign="center" py="1em">{label}</Text.SubTitle>}

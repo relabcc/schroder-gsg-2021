@@ -32,12 +32,12 @@ const StyleTab = styled(Tab)`
   border-radius: 0;
   display: inline-block;
   text-align: center;
-  background-color: ${themeGet('colors.lightGray')};
+  background-color: ${themeGet('colors.gray')};
   transition: all ${themeGet('duration', 250)}ms;
   &:hover,
   &.react-tabs__tab--selected {
-    background-color: ${themeGet('colors.prussianBlue')};
-    color: ${themeGet('colors.ceruleanBlue')};
+    background-color: ${themeGet('colors.darkGreen')};
+    color: white;
     border-radius: 0;
   }
 `
@@ -51,40 +51,28 @@ const sets = [
   {
     name: '投資組合',
     data: [
-      {
-        title: '國家分佈',
-        Comp: (props) => <Allocation {...props} index={0} />,
-      },
-      {
-        title: '債券類別',
-        Comp: (props) => <Allocation {...props} index={1} fill="bgGreen" />,
-      },
+      // {
+      //   title: '國家分佈',
+      //   Comp: (props) => <Allocation {...props} index={0} />,
+      // },
+      // {
+      //   title: '債券類別',
+      //   Comp: (props) => <Allocation {...props} index={1} fill="bgGreen" />,
+      // },
     ]
   },
   {
     name: '基金績效',
     data: [
-      {
-        title: '基金表現',
-        Comp: PriceTable,
-      },
-      {
-        title: '淨值走勢',
-        Comp: Price,
-        source: '資料來源：施羅德投資。'
-      },
-    ]
-  },
-  {
-    name: '配息紀錄',
-    data: [
-      {
-        Comp: USDividendsTable,
-      },
-      {
-        Comp: SADividendsTable,
-        source: '資料來源：Lipper, 施羅德投資，以美元和南非幣原幣別計算。本基金成立日期為2016/11/30。同當月配息率(%):每單位配息金額/除息日資產淨值、年化配息率為當月配息率*12、當月報酬率(含息)為當月之含息總報酬。基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。基金實際配息及相關配息時間依基金管理機構通知為準。固定收益分配類型基金會定期將基金收益分配予投資人，投資人應當了解依其原始投資日期之不同，基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。'
-      },
+      // {
+      //   title: '基金表現',
+      //   Comp: PriceTable,
+      // },
+      // {
+      //   title: '淨值走勢',
+      //   Comp: Price,
+      //   source: '資料來源：施羅德投資。'
+      // },
     ]
   },
 ]

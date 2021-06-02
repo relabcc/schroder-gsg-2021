@@ -12,6 +12,7 @@ import tag from 'clean-tag';
 
 import blacklist from './utils/blacklist';
 import injectProps from './utils/injectProps';
+import { responsive } from './ThemeProvider/theme';
 
 const Text = styled(tag)`
   margin-top: 0;
@@ -27,7 +28,7 @@ const Text = styled(tag)`
 
 Text.defaultProps = {
   is: 'p',
-  fontSize: '1em',
+  fontSize: responsive('1em', '1.25em'),
   lineHeight: 1.5,
   blacklist,
 };
@@ -35,6 +36,8 @@ Text.defaultProps = {
 Text.inline = (props) => <Text is="span" {...props} />;
 Text.bold = (props) => <Text fontWeight="bold" {...props} />;
 Text.thin = (props) => <Text fontWeight="200" {...props} />;
+Text.Title = (props) => <Text fontWeight="bold" color="darkGreen" fontSize={responsive('1.85em', '2.86em')} {...props} />
+Text.SubTitle = (props) => <Text.Title color="titleBlue" fontSize={responsive('1.5em', '1.875em')} {...props} />
 
 range(1, 7).forEach((key) => {
   const h = `h${key}`;

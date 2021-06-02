@@ -10,8 +10,8 @@ import Waterfall from './Waterfall'
 
 const Allocation = ({ isMobile, index, fill }) => {
   return (
-    <Data path="/allocation">
-      {(data) => {
+    <Data path="/industries">
+      {/* {(data) => {
         const hi = map(groupBy(data, 'Type'), (dd) => {
           let updatedAt
           const mapped = dd.map(({ Item, Percentage, Updated }) => {
@@ -35,7 +35,7 @@ const Allocation = ({ isMobile, index, fill }) => {
             <Source>資料來源：施羅德投資，截止至{get(hi, [index, 'updatedAt'])}。</Source>
           </>
         )
-      }}
+      }} */}
     </Data>
   );
 };

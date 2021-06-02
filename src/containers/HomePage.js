@@ -14,7 +14,7 @@ const HomePage = () => {
   const [showSide, setShowSide] = useState(true)
   return (
     <>
-      <Intro isLaptop={isLaptop} isMobile={isMobile} />
+      {/* <Intro isLaptop={isLaptop} isMobile={isMobile} /> */}
       <Sections isMobile={isMobile} />
       <Waypoint
         onEnter={() => {
@@ -25,7 +25,7 @@ const HomePage = () => {
       />
       <Fund noSticky />
       <BackToTop />
-      {showSide && !isMobile && <SideInfo />}
+      {/* {showSide && !isMobile && <SideInfo />} */}
     </>
   )
 }

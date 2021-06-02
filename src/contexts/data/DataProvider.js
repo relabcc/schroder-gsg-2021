@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'use-http';
 
-const BASE_URL = 'https://us-central1-re-drive-75970.cloudfunctions.net/app/schrodersGCI'
+const BASE_URL = 'https://us-central1-re-drive-75970.cloudfunctions.net/app/schrodersGSG'
 
 // prices/:name
 // dividends/:name

@@ -39,7 +39,7 @@ const disco = '#B71962'
 const titleBlue = '#19376d'
 const bgGreen = '#00796D'
 const darkGreen = '#18776c'
-const textGreen = '#6aa84f'
+const textGreen = '#5FC152'
 const lime = '#BAE659'
 
 export default {

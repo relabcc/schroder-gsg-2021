@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import Box from '../../components/Box'
 import { responsive } from '../../components/ThemeProvider/theme'
 
-const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'bgGreen', noMobile }) => {
+const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkGreen', noMobile }) => {
   const getStripBg = useCallback((i) => i % 2 ? 'lightGray' : 'white', [])
   const getResponsive = useCallback((mobile, desk) => noMobile ? desk : responsive(mobile, desk), [noMobile])
   return (
@@ -27,7 +27,7 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'bgGre
           ))}
         </Box>
       </Box>
-      {nowData.tbody.map((h, i) => (
+      {nowData.tbody.map((h, i, { length }) => (
         <Box is="tbody" key={i}>
           <Box is="tr">
             {h.map((n, k) => (
@@ -36,8 +36,10 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'bgGre
                 is="td"
                 px="0.5em"
                 py="1em"
-                bg={getResponsive(k ? getStripBg(k + 1) : bg, getStripBg(i))}
-                color={getResponsive(k ? 'black' : 'white', 'black')}
+                bg={getResponsive(k ? getStripBg(k + 1) : bg, 'white')}
+                borderBottom="1px solid"
+                borderColor="darkBlue"
+                color={getResponsive(k ? 'black' : 'white', i == length - 1 ? 'textGreen' : 'black')}
                 textAlign={getResponsive('center', tbodyAlign ? tbodyAlign : k ? 'right' : 'left')}
                 key={k}
               >

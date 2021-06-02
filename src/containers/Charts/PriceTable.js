@@ -1,5 +1,6 @@
 import React from 'react';
 import get from 'lodash/get'
+import { range } from 'lodash';
 
 import Table from './Table'
 
@@ -7,13 +8,15 @@ import Data from '../../contexts/data'
 import Source from '../../components/Source'
 
 const names = [
-  ['thisYear', '今年以來'],
-  ['month3', '三個月'],
-  ['month6', '六個月'],
-  ['year1', '一年'],
-  ['year2', '二年'],
-  ['year3', '三年'],
-  ['allTime', '成立以來'],
+  '累積報酬, 美元報酬 (%)',
+  '今年以來',
+  '三個月',
+  '六個月',
+  '一年',
+  '二年',
+  '三年',
+  '五年',
+  '標準差',
 ]
 
 const PriceTable = ({ isMobile }) => {
@@ -21,19 +24,17 @@ const PriceTable = ({ isMobile }) => {
     <Data path="/performance">
       {(data) => {
         if (!data.length) return null
-        const table = names.map(([key, name]) => [name, data[0][key], data[2][key]])
-        const note = get(data, [3, 'name'])
+        const table = names.map((name) => [name, data[0][name], data[1][name], data[2][name], data[3][name]])
+        const note = get(data, [4, names[0]])
+        console.log(table)
 
         const priceData = {
-          th: ['報酬率，美元(%)', ...table.map(d => d[0])],
-          tbody: [
-            ['施羅德(環)環球收息債券\n(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)', ...table.map(d => d[1])],
-            ['同類型基金平均值(37檔)', ...table.map(d => d[2])],
-          ]
+          th: [...table.map(d => d[0])],
+          tbody: range((table[0].length - 1)).map(index => [...table.map(d => d[index + 1])])
         }
         const priceDataMobile= {
-          th: ['報酬率\n美元(%)', 'A美元月配\n(%)', '同類型基金\n平均值(37檔)\n(%)'],
-          tbody: table,
+          th: table[0],
+          tbody: table.slice(1),
         }
 
         return (

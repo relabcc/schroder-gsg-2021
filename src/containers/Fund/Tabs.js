@@ -64,10 +64,10 @@ const sets = [
   {
     name: '基金績效',
     data: [
-      // {
-      //   title: '基金表現',
-      //   Comp: PriceTable,
-      // },
+      {
+        title: '基金表現',
+        Comp: PriceTable,
+      },
       // {
       //   title: '淨值走勢',
       //   Comp: Price,

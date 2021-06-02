@@ -26,7 +26,7 @@ const PriceTable = ({ isMobile }) => {
         if (!data.length) return null
         const table = names.map((name) => [name, data[0][name], data[1][name], data[2][name], data[3][name]])
         const note = get(data, [4, names[0]])
-        console.log(table)
+        // console.log(table)
 
         const priceData = {
           th: [...table.map(d => d[0])],
@@ -36,7 +36,7 @@ const PriceTable = ({ isMobile }) => {
           th: table[0],
           tbody: table.slice(1),
         }
-
+        // ['累積報酬, \n美元報酬 \n(%)', '施羅德(環)\n環球永續增長', '四分位\n排名', '同類型基金平均\n(86檔)', 'MSCI AC World Index'],
         return (
           <>
             <Table nowData={isMobile ? priceDataMobile : priceData} isMobile={isMobile} />

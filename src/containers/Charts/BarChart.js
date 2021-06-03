@@ -32,7 +32,12 @@ const BarChart = ({ isMobile, index, dataPath, fill }) => {
         }, [])
         return (
           <>
-            <Bar data={transformData} max={maxDomain} colors={[theme.colors.textGreen, theme.colors.darkGreen]} />
+            <Bar
+              isMobile={isMobile}
+              data={transformData}
+              max={maxDomain}
+              colors={[theme.colors.textGreen, theme.colors.darkGreen]}
+            />
             <Source>{source}</Source>
           </>
         )

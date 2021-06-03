@@ -26,11 +26,11 @@ import icon2_3_1 from './2-3-1.png'
 
 const sets = [
   {
-    title: '聚焦永續的三大選股方向\n　',
+    title: '聚焦永續的三大選股方向\n\n',
     src: icon2_1
   },
   {
-    title: '永續投資策略\n　',
+    title: '永續投資策略\n\n',
     src: icon2_2
   },
   {

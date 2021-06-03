@@ -18,6 +18,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => (
     {content.map(({ src, title, label, text }, k, { length }) => (
       <Flex
         mx="1em"
+        mt={responsive('1em', 0)}
         pb={responsive('0.5em', '1em')}
         alignItems="center"
         flexDirection={vertical ? responsive('column', 'row') : 'column'}
@@ -25,11 +26,11 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => (
         key={k}
       >
         <Box width={leftWidth} mr={vertical && responsive(0, '2em')}>
-          <Text.SubTitle textAlign="center" whiteSpace="pre-wrap">{title}</Text.SubTitle>
+          <Text.SubTitle textAlign="center" whiteSpace={responsive('auto', 'pre-wrap')}>{title}</Text.SubTitle>
           <Box width={logoWidth || '50%'} mx="auto" mt="1em">
             <Image src={src} />
           </Box>
-          {label && <Text.SubTitle textAlign="center" py="1em">{label}</Text.SubTitle>}
+          {label && <Text.SubTitle textAlign="center" py={responsive('0.5em', '1em')}>{label}</Text.SubTitle>}
         </Box>
         <Text fontSize={responsive('1em', '1.25em')}>{text}</Text>
       </Flex>

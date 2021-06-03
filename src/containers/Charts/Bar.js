@@ -59,27 +59,27 @@ const CleanText = ({ children, x, y, style }) => (
   </text>
 )
 
-const barWidhth = 14
+const barWidhth = (isMobile) => isMobile ? 22 : 14
 
 const Bar = ({ data, isMobile, max, colors }) => {
   return (
     <VictoryChart
       theme={chartTheme}
       domain={{ y: [0, max + 10] }}
-      width={isMobile ? 500 : 1000}
-      height={450}
+      width={isMobile ? 600 : 1000}
+      height={isMobile ? 600 : 500}
       containerComponent={<VictoryContainer />}
       padding={{
         top: isMobile ? 50 : 10,
-        left: isMobile ? 70 : 100,
-        bottom: isMobile ? 0 : 70,
+        left: isMobile ? 125 : 100,
+        bottom: isMobile ? 40 : 70,
         right: 40,
       }}
     >
       <VictoryGroup
         horizontal
-        offset={barWidhth + 1}
-        style={{ data: { width: barWidhth } }}
+        offset={barWidhth(isMobile) + 1}
+        style={{ data: { width: barWidhth(isMobile) } }}
       >
         {data.map((d, i) => (
           <VictoryBar
@@ -91,6 +91,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
               },
               labels: {
                 fill: colors[i],
+                fontSize: isMobile ? 18 : 12
               },
             }}
             key={i}
@@ -114,7 +115,10 @@ const Bar = ({ data, isMobile, max, colors }) => {
             fill: 'transparent',
             strokeWidth: 0,
             strokeDasharray: '2, 5',
-          }
+          },
+          tickLabels: {
+            fontSize: isMobile ? 18 : 14
+          },
         }}
       />
     </VictoryChart>

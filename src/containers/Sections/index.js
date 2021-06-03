@@ -20,7 +20,7 @@ const Sections = ({ isMobile }) => {
   return (
     <Box id="fund-head" pt={responsive(0, '2em')}>
       {secs.map(({ Comp, name }) => (
-        <Comp />
+        <Comp key={name} />
       ))}
     </Box>
   )

@@ -117,7 +117,8 @@ const Bar = ({ data, isMobile, max, colors }) => {
             strokeDasharray: '2, 5',
           },
           tickLabels: {
-            fontSize: isMobile ? 18 : 14
+            fontSize: isMobile ? 18 : 14,
+            whiteSpace: 'pre-wrap'
           },
         }}
       />

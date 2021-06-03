@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from '../../../components/Container'
 import Box from '../../../components/Box'
-import Flex from '../../../components/Flex'
 import Image from '../../../components/Image'
 import Text from '../../../components/Text'
+import Source from '../../../components/Source'
 import Module from '../../../components/Module'
 import { responsive } from '../../../components/ThemeProvider/theme'
 
@@ -51,12 +51,13 @@ const sections = [
         text: 'MSCI世界ESG指數13年有10年優於全球股市',
       },
     ],
-    source: '資料來源：UN, EU, Norges Bank, GPIF, 晨星, MSCI, Schroders 整理提供, 截至2021/4/30. MSCI ACWI ESG指數於2007年9月成立，統計2008年至2020年度，以美元計算。'
+    source: '資料來源：UN, Environmental Finance, Morningstar, MSCI, Schroders, 2021/4/30.'
   },
   {
     title: '永續投資首選施羅德',
     desc: '施羅德已將ESG貫徹於所有基金投資策略中，堅信重視「永續性」的企業，其商業模式也擁有潛藏的韌性，更能支持公司持續成長。\n\n施羅德(環)環球永續增長基金，將「永續發展」設為投資主要標準，為全方位的永續投資旗艦型股票基金。',
     subtitle: '來自內外的永續認證',
+    logoWidth: responsive('50%', '70%'),
     content: [
       {
         src: ESG2_1,
@@ -92,23 +93,25 @@ const ESG = ({ innerRef }) => {
   const { isMobile } = useResponsive()
   return (
     <Box ref={innerRef}>
-      <Container py={responsive('2.86em', '7.143em')}>
-        {sections.map(({ title, desc, content, source, subtitle }, i) => (
-          <Box mt={i && '2em'} key={i}>
+      <Container py='1em'>
+        {sections.map(({ title, desc, content, source, logoWidth, subtitle }, i) => (
+          <Box mt={i && '3em'} key={i}>
             <Text.Title lineHeight="2">{title}</Text.Title>
             <Text fontSize={responsive('1em', '1.25em')} whiteSpace="pre-wrap">{desc}</Text>
             {subtitle && <Text.SubTitle mt="1em">{subtitle}</Text.SubTitle>}
             <Module
               content={content}
+              logoWidth={logoWidth}
             />
-            <Text color="lightGray" fontSize={responsive('0.875em', '1m')}>{source}</Text>
+            <Source fontSize={responsive('0.875em', '1m')}>{source}</Source>
           </Box>
         ))}
-        <Box mt="1em">
+        <Box mt="2em">
           <Text.SubTitle>亮眼的投資表現</Text.SubTitle>
           <Box mt="1em">
             <Image src={chart} />
           </Box>
+          <Source>資料來源：Lipper, USD, as of 2021/4/30. 本基金參考指標為MSCI AC World Index.</Source>
         </Box>
       </Container>
     </Box>

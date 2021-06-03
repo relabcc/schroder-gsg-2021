@@ -26,15 +26,15 @@ import icon2_3_1 from './2-3-1.png'
 
 const sets = [
   {
-    title: '聚焦永續的三大選股方向\n\n',
+    label: '聚焦永續的三大選股方向',
     src: icon2_1
   },
   {
-    title: '永續投資策略\n\n',
+    label: '永續投資策略',
     src: icon2_2
   },
   {
-    title: '永續團隊與\n主動參與的投資角色',
+    label: '永續團隊與\n主動參與的投資角色',
     src: icon2_3
   },
 ]
@@ -44,23 +44,22 @@ const data = [
     title: '聚焦永續的三大選股方向',
     step: '一',
     src: icon2_1,
-    vertical: true,
-    leftWidth: responsive('100%', '10%'),
-    logoWidth: responsive('50%', '100%'),
+    text: '選股策略以永續發展經營為主要標準之一，涵蓋永續環境、創新未來、健康生活等三大永續主題。',
+    // logoWidth: responsive('50%', '70%'),
     content: [
       [
         {
-          title: '永續環境',
+          label: '永續環境',
           src: icon2_1_1,
           text: '企業營運或產品有利環境與能源永續利用。例如：全球風力發電龍頭、美國最大農機等標的。',
         },
         {
-          title: '創新未來',
+          label: '創新未來',
           src: icon2_1_2,
           text: '企業主要業務或服務能夠提供人更美好未來。例如：全球最大軟體服務公司。',
         },
         {
-          title: '健康生活',
+          label: '健康生活',
           src: icon2_1_3,
           text: '企業產品為讓人擁有健康生活與生活模式。例如：全球最大抗癌製藥廠、歐洲最大運動品牌。',
         },
@@ -71,6 +70,7 @@ const data = [
     title: '永續投資策略',
     step: '二',
     src: icon2_2,
+    text: '將企業的「永續競爭力」評估設定於投資目標中，投資流程中則利用集團永續評等工具(SustainEx)協助經理人管理投組。除了傳統的企業獲利評估外，加入永續因子考量，挑選能夠面對永續浪潮下而能維持長期經營的標的。',
     subTitle: ['主動排除爭議性產業，有助投資人避開未來潛藏的ESG永續風險', '質化深入分析－永續評分架構'],
     content: [
       icon2_2_1,
@@ -101,7 +101,7 @@ const data = [
   {
     title: '永續團隊與主動參與的投資角色',
     step: '三',
-    text: '結合集團研究資源，分析師、數據團隊，以及專長於永續投資的分析專家們，協助全球股票團隊管理基金。除了尋找投資機會，也透過投資者的影響力積極參與議合，鼓勵引導企業以永續發展為經營策略。',
+    text: '結合集團研究資源，分析師、數據團隊，以及專長於永續投資的分析專家們，本基金由ESG永續團隊+全球股票團隊共同管理。除了尋找投資機會，也透過投資者的影響力積極參與議合，鼓勵引導企業以永續發展為經營策略。',
     src: icon2_3,
     content: [
       icon2_3_1
@@ -114,23 +114,23 @@ const Feature = ({ innerRef }) => {
 
   return (
     <Box ref={innerRef}>
-      <Container py={responsive('2.86em', '7.143em')}>
+      <Container pt={responsive('2.86em', '7.143em')} pb={responsive('1em', '3em')}>
         <Text.Title>施羅德(環)環球永續增長基金三大特色</Text.Title>
         <Module content={sets} />
       </Container>
-      {data.map(({ title, step, src, subTitle, text, vertical, leftWidth, logoWidth, content }, i) => (
+      {data.map(({ title, step, src, subTitle, text, logoWidth, content }, i) => (
         <Box key={i}>
           <Title title={title} src={src} step={step}  />
-          <Container py="2em">
+          <Container py="3em">
             <Text>{text}</Text>
             {content.map((d, i) => isArray(d) ? (
-              <Box mt={i && responsive('1em', '2em')}>
-                {subTitle && <Text.SubTitle>({i + 1}){subTitle[i]}</Text.SubTitle>}
-                <Module content={d} vertical={vertical} leftWidth={leftWidth} logoWidth={logoWidth} />
+              <Box mt={responsive('1em', '2em')} key={i}>
+                {subTitle && <Text.SubTitle color="darkGreen">({i + 1}){subTitle[i]}</Text.SubTitle>}
+                <Module content={d} logoWidth={logoWidth} />
               </Box>
             ) : (
-              <Box mt={i && responsive('1em', '2em')}>
-                {subTitle && <Text.SubTitle>({i + 1}){subTitle[i]}</Text.SubTitle>}
+              <Box mt={responsive('1em', '2em')} key={i}>
+                {subTitle && <Text.SubTitle color="darkGreen">({i + 1}){subTitle[i]}</Text.SubTitle>}
                 <Box mt="1em">
                   <Image src={d} />
                 </Box>

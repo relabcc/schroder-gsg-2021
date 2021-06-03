@@ -54,19 +54,6 @@ const Intro = ({ isLaptop, isMobile }) => {
           </Box>
         </Container>
       </BackgroundImage>
-      <Container pt="2em">
-        {/* <Text.h3>變動的市場 不變的核心組合</Text.h3>
-        <Text.h4 my="1em">
-          面對低收益和高波動的投資環境，投資人該如何獲得持續性的收入與減少波動對投資的衝擊？追求品質、多元配置、不受參考指標限制的環球收息債券策略投資方法是實現這些目標的關鍵。
-        </Text.h4>
-        <Box textAlign="center" my={responsive('2em', '4em')}>
-          <Button.transparent fontSize={responsive('1em', '1.5em')} onClick={() => scrollToName(isMobile)}>
-            <Arrow width="2em" my="0.5em" />
-            <br />
-            了解更多
-          </Button.transparent>
-        </Box> */}
-      </Container>
     </>
   )
 }

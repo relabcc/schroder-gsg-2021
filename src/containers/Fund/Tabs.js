@@ -54,12 +54,12 @@ const sets = [
     data: [
       {
         title: '產業配置',
-        Comp: (props) => <BarChart {...props} />,
+        Comp: (props) => <BarChart dataPath="/industries" {...props} />,
       },
-      // {
-      //   title: '債券類別',
-      //   Comp: (props) => <Allocation {...props} index={1} fill="bgGreen" />,
-      // },
+      {
+        title: '區域配置',
+        Comp: (props) => <BarChart dataPath="/geographical" {...props} />,
+      },
     ]
   },
   {

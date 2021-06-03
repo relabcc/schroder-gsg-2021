@@ -25,7 +25,7 @@ const chartTheme = merge({}, VictoryTheme.grayscale, {
       },
       labels: {
         fontWeight: 700,
-        fontSize: 8,
+        fontSize: 10,
         fontFamily: 'inherit',
       },
     }
@@ -33,7 +33,6 @@ const chartTheme = merge({}, VictoryTheme.grayscale, {
   line: {
     style: {
       data: {
-        stroke: theme.colors.lightGray,
         strokeWidth: 1,
         strokeDasharray: '10, 5',
       }
@@ -47,7 +46,10 @@ const chartTheme = merge({}, VictoryTheme.grayscale, {
       tickLabels: {
         fontFamily: 'inherit',
       },
-    }
+      axis: {
+        stroke: 'transparent'
+      },
+    },
   }
 })
 
@@ -57,48 +59,64 @@ const CleanText = ({ children, x, y, style }) => (
   </text>
 )
 
-const Bar = ({ data, isMobile, fill = 'lime' }) => {
-  const wData = useMemo(() => {
-    if (!data) return []
-    const mapped = data.reduce((res, d, index) => [
-      ...res,
-      {
-        ...d,
-        y0: index && (res[index - 1].y0 + res[index - 1].p),
-        y: index ? (res[index - 1].y + d.p) : d.p,
-      }
-    ], [])
-    return isMobile ? [...mapped].reverse() : mapped
-  }, [data, isMobile])
+const barWidhth = 14
+
+const Bar = ({ data, isMobile, max, colors }) => {
   return (
     <VictoryChart
       theme={chartTheme}
-      domain={{y: [0, 100]}}
-      domainPadding={30}
-      // width={isMobile ? 400 : 800}
-      // height={isMobile ? 650: 350}
+      domain={{ y: [0, max + 10] }}
+      width={isMobile ? 500 : 1000}
+      height={450}
       containerComponent={<VictoryContainer />}
       padding={{
-        // top: isMobile ? 50 : 10,
-        // left: isMobile ? 70 : 50,
-        // bottom: isMobile ? 0 : 70,
-        // right: 50,
+        top: isMobile ? 50 : 10,
+        left: isMobile ? 70 : 100,
+        bottom: isMobile ? 0 : 70,
+        right: 40,
       }}
     >
       <VictoryGroup
         horizontal
-        offset={12}
-        style={{ data: { width: 12 } }}
-        // colorScale={["darkGreen", "textGreen"]}
+        offset={barWidhth + 1}
+        style={{ data: { width: barWidhth } }}
       >
         {data.map((d, i) => (
           <VictoryBar
             data={d}
-            style={{ data: { fill: i ? theme.colors.darkGreen : theme.colors.textGreen, stroke: 'transparent' } }}
+            style={{
+              data: {
+                fill: colors[i],
+                stroke: theme.colors.darkGreen,
+              },
+              labels: {
+                fill: colors[i],
+              },
+            }}
             key={i}
           />
         ))}
       </VictoryGroup>
+      <VictoryAxis
+        style={{
+          grid: {
+            fill: 'transparent',
+            stroke: theme.colors.textGreen,
+            strokeWidth: 1,
+            strokeDasharray: '2, 5',
+          }
+        }}
+        dependentAxis
+      />
+      <VictoryAxis
+        style={{
+          grid: {
+            fill: 'transparent',
+            strokeWidth: 0,
+            strokeDasharray: '2, 5',
+          }
+        }}
+      />
     </VictoryChart>
   )
 }

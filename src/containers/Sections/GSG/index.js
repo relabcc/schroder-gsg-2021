@@ -13,6 +13,9 @@ import ESG1 from './1-1-1.png'
 import ESG2 from './1-1-2.png'
 import ESG3 from './1-1-3.png'
 import ESG4 from './1-1-4.png'
+import ESG2_1 from './1-2-1.png'
+import ESG2_2 from './1-2-2.png'
+import ESG2_3 from './1-2-3.png'
 import chart from './1-3.png'
 
 // import Table from '../Charts/Table'
@@ -56,12 +59,12 @@ const sections = [
     subtitle: '來自內外的永續認證',
     content: [
       {
-        src: '',
+        src: ESG2_1,
         label: '聯合國A+認證',
         text: '施羅德連續6年榮獲聯合國PRI責任投資最高A+評級',
       },
       {
-        src: '',
+        src: ESG2_2,
         label: '集團ESG流程認證',
         text: 'ESG永續團隊&全球股票團隊共同管理',
       },
@@ -71,7 +74,7 @@ const sections = [
       //   text: '榮獲2020最佳環境金融ESG工具獎（SustainEx）',
       // },
       {
-        src: '',
+        src: ESG2_3,
         label: '基金評鑑晨星認證',
         text: '晨星5顆地球永續最高評級',
       },

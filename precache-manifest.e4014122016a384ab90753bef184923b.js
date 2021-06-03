@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9575ac6d21ef1ca9e588b9fbd0922cfb",
+    "revision": "c0f683d45bf919a1a578b5a546ec42e1",
     "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/index.html"
   },
   {
-    "revision": "e5999a4c115b53225a36",
+    "revision": "d627df400aedeb162125",
     "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/css/1.5c17b9f1.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/0.b7d13013.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e5999a4c115b53225a36",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/1.2c59c568.chunk.js"
+    "revision": "d627df400aedeb162125",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/1.57ec0d15.chunk.js"
   },
   {
     "revision": "b1f16ac0e51acffa9637d7facefa237b",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/1.2c59c568.chunk.js.LICENSE.txt"
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/1.57ec0d15.chunk.js.LICENSE.txt"
   },
   {
     "revision": "2a7408979ff656b38bff",
@@ -32,32 +32,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/4.c16f0417.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ecc9fa7e7776daa042df",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/5.7e6aff8e.chunk.js"
+    "revision": "f246e9f830ee519bfd0e",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/5.99fb511c.chunk.js"
   },
   {
-    "revision": "9f7d886128a19e871712",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/6.7d07fc6d.chunk.js"
+    "revision": "469fbdd25575fa77a104",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/6.66bff91c.chunk.js"
   },
   {
-    "revision": "e2176d9d11df8518c3f5",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/7.0b0aac73.chunk.js"
+    "revision": "7ceb8b5b47c9e02343cf",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/7.d3784e20.chunk.js"
   },
   {
-    "revision": "217f5d0a27db1fe598b1",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/8.fb2f423c.chunk.js"
+    "revision": "107752a9577c18652698",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/8.5bb113c1.chunk.js"
   },
   {
-    "revision": "bf5c63153bdc6f9d80b8",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/9.007fd651.chunk.js"
+    "revision": "fe8d3224672eed1afa98",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/9.f95f466e.chunk.js"
   },
   {
-    "revision": "789ace908cdaeb42703b",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/main.d22bc2b7.chunk.js"
+    "revision": "6d6e6ab2081fc34abdf3",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/main.c410b764.chunk.js"
   },
   {
-    "revision": "c79c6c87f4bb97e73c1d",
-    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/runtime-main.7523786c.js"
+    "revision": "bb8d423f083b0b733f1c",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/js/runtime-main.2c189689.js"
   },
   {
     "revision": "5ee295efeaa80816922c944065da5424",
@@ -74,6 +74,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1eda3f68d72a0f7e14c02aab1b275b79",
     "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/media/1-1-4.1eda3f68.png"
+  },
+  {
+    "revision": "70c82a2c74007250ed7eac27daee5dce",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/media/1-2-1.70c82a2c.png"
+  },
+  {
+    "revision": "abed9f8cd64749d34c3626b895e0de1a",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/media/1-2-2.abed9f8c.png"
+  },
+  {
+    "revision": "3a1636035c98d1da5cb3323c31e0fa38",
+    "url": "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/static/media/1-2-3.3a163603.png"
   },
   {
     "revision": "e7864e450e27f3d5918302e2e1eb7bf4",

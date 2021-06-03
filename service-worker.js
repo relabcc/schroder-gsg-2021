@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/precache-manifest.80113a4dd071f1a6b3fc33aa7b3ec5ee.js"
+  "/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2020-GCI/precache-manifest.e4014122016a384ab90753bef184923b.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -13,7 +13,7 @@ import photo2 from './3-2.png'
 const photo = [
   {
     src: photo1,
-    width: '75%'
+    width: responsive('100%', '75%')
   },
   {
     src: photo2,

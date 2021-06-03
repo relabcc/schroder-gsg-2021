@@ -71,7 +71,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
       containerComponent={<VictoryContainer />}
       padding={{
         top: isMobile ? 50 : 10,
-        left: isMobile ? 125 : 100,
+        left: 100,
         bottom: isMobile ? 40 : 70,
         right: 40,
       }}
@@ -118,7 +118,8 @@ const Bar = ({ data, isMobile, max, colors }) => {
           },
           tickLabels: {
             fontSize: isMobile ? 18 : 14,
-            whiteSpace: 'pre-wrap'
+            mb: 2
+            // whiteSpace: 'pre-wrap'
           },
         }}
       />

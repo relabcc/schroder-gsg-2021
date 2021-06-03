@@ -66,7 +66,7 @@ const sets = [
     name: '基金績效',
     data: [
       {
-        title: '基金績效',
+        title: '基金累積績效',
         Comp: PriceTable,
       },
       // {

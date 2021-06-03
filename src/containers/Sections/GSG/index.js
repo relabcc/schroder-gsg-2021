@@ -57,7 +57,6 @@ const sections = [
     title: '永續投資首選施羅德',
     desc: '施羅德已將ESG貫徹於所有基金投資策略中，堅信重視「永續性」的企業，其商業模式也擁有潛藏的韌性，更能支持公司持續成長。\n\n施羅德(環)環球永續增長基金，將「永續發展」設為投資主要標準，為全方位的永續投資旗艦型股票基金。',
     subtitle: '來自內外的永續認證',
-    logoWidth: responsive('50%', '70%'),
     content: [
       {
         src: ESG2_1,
@@ -97,7 +96,7 @@ const ESG = ({ innerRef }) => {
         {sections.map(({ title, desc, content, source, logoWidth, subtitle }, i) => (
           <Box mt={i && '3em'} key={i}>
             <Text.Title lineHeight="2">{title}</Text.Title>
-            <Text fontSize={responsive('1em', '1.25em')} whiteSpace="pre-wrap">{desc}</Text>
+            <Text whiteSpace="pre-wrap">{desc}</Text>
             {subtitle && <Text.SubTitle mt="1em">{subtitle}</Text.SubTitle>}
             <Module
               content={content}

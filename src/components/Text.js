@@ -28,8 +28,8 @@ const Text = styled(tag)`
 
 Text.defaultProps = {
   is: 'p',
-  fontSize: responsive('1em', '1.25em'),
-  lineHeight: 1.5,
+  fontSize: responsive('1.15em', '1.25em'),
+  lineHeight: 1.75,
   blacklist,
 };
 
@@ -37,7 +37,7 @@ Text.inline = (props) => <Text is="span" {...props} />;
 Text.bold = (props) => <Text fontWeight="bold" {...props} />;
 Text.thin = (props) => <Text fontWeight="200" {...props} />;
 Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="bold" color="darkGreen" fontSize={responsive('1.85em', '2.86em')} {...props} />)
-Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} color="titleBlue" fontSize={responsive('1.5em', '1.875em')} {...props} />)
+Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} color="titleBlue" fontSize={responsive('1.428em', '1.875em')} {...props} />)
 
 range(1, 7).forEach((key) => {
   const h = `h${key}`;

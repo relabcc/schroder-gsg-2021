@@ -32,7 +32,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
     <Flex
       mx={responsive(0, '-1em')}
       alignItems={responsive('center', 'flex-start')}
-      mt={responsive('1em', '1.25em')}
+      mt={responsive('2em', '1.25em')}
       flexDirection={responsive('column', vertical ? 'column' : 'row')}
       {...props}
     >
@@ -41,28 +41,29 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
           mx="1em"
           mt={responsive('1em', 0)}
           pb={responsive('0.5em', '1em')}
-          // alignItems="center"
-          flexDirection={vertical ? responsive('column', 'row') : 'column'}
+          alignItems="center"
+          flexDirection={responsive('row', 'column')}
           width={responsive(1, vertical ? 1 : 1 / length)}
           height="100%"
           key={k}
         >
-          <Box width={leftWidth} mr={vertical && responsive(0, '2em')}>
-            <Text.SubTitle textAlign="center" whiteSpace={responsive('auto', 'pre-wrap')}>{title}</Text.SubTitle>
-            <Box
-              width={logoWidth || (length < 4 ? responsive('50%', '70%') : responsive('50%', 'auto'))}
-              px={responsive(0, '1em')}
-              mt={title && "1em"}
-              mx="auto"
-            >
-              <Image src={src} />
-            </Box>
+            {/* <Text.SubTitle textAlign="center" whiteSpace={responsive('auto', 'pre-wrap')}>{title}</Text.SubTitle> */}
+          <Box
+            width={logoWidth || (length < 4 ? responsive('6.428em', '70%') : responsive('6.428em', 'auto'))}
+            mr={responsive('2em', 0)}
+            px={responsive(0, '1em')}
+            mt={title && "1em"}
+            mx="auto"
+          >
+            <Image src={src} />
+          </Box>
+          <Box flex={1}>
             {label && (
               <Flex
                 style={{ height: maxHeight }}
                 my={responsive('0.5em', '1em')}
                 alignItems="center"
-                justifyContent="center"
+                justifyContent={responsive('flex-start', 'center')}
               >
                 <Text.SubTitle
                   ref={refs[k]}
@@ -70,9 +71,9 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                   textAlign="left"
                 >{label}</Text.SubTitle>
               </Flex>
-            )}
+              )}
+              <Text>{text}</Text>
           </Box>
-          <Text fontSize={responsive('1em', '1.25em')}>{text}</Text>
         </Flex>
       ))}
     </Flex>

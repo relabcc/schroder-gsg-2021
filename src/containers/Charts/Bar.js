@@ -61,7 +61,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
   return (
     <VictoryChart
       theme={chartTheme}
-      domain={{ y: [0, max + 10] }}
+      domain={{ y: [0, max + 5] }}
       width={isMobile ? 600 : 1200}
       height={600}
       containerComponent={<VictoryContainer />}
@@ -120,7 +120,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
         }}
       />
       <VictoryLegend
-        x={1100}
+        x={isMobile ? 510 : 1100}
         y={450}
         centerTitle
         orientation="vertical"

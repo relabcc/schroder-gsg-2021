@@ -115,7 +115,7 @@ const Feature = ({ innerRef }) => {
   return (
     <Box ref={innerRef}>
       <Container pt={responsive('2.86em', '7.143em')} pb={responsive('1em', '3em')}>
-        <Text.Title>施羅德(環)環球永續增長基金三大特色</Text.Title>
+        <Box.Title>施羅德(環)環球永續增長基金三大特色</Box.Title>
         <Module content={sets} />
       </Container>
       {data.map(({ title, step, src, subTitle, text, logoWidth, content }, i) => (

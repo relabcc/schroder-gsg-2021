@@ -63,7 +63,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
             {label && (
               <Flex
                 style={{ height: isMobile ? 'auto' : maxHeight }}
-                my={responsive('0.375em', '1em')}
+                my={responsive('0.375em', '1.5em')}
                 alignItems="center"
                 justifyContent={responsive('flex-start', 'center')}
               >
@@ -74,7 +74,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                 >{label}</Text.SubTitle>
               </Flex>
               )}
-              <Text whiteSpace="pre-wrap">{text}</Text>
+              <Text px="0.375em" whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

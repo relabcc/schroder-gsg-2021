@@ -95,7 +95,7 @@ const ESG = ({ innerRef }) => {
       <Container py='1em'>
         {sections.map(({ title, desc, content, source, logoWidth, subtitle }, i) => (
           <Box mt={i && '3em'} key={i}>
-            <Text.Title lineHeight="2">{title}</Text.Title>
+            <Box.Title lineHeight="2">{title}</Box.Title>
             <Text.Desc whiteSpace="pre-wrap">{desc}</Text.Desc>
             {subtitle && <Text.SubTitle color="darkGreen" mt="1em">{subtitle}</Text.SubTitle>}
             <Module

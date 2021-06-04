@@ -36,7 +36,7 @@ const BarChart = ({ isMobile, index, dataPath, fill }) => {
               isMobile={isMobile}
               data={transformData}
               max={maxDomain}
-              colors={[theme.colors.textGreen, theme.colors.darkGreen]}
+              colors={[theme.colors.lightGreen, theme.colors.darkGreen]}
             />
             <Source>{source}</Source>
           </>

@@ -38,8 +38,8 @@ Text.inline = (props) => <Text is="span" {...props} />;
 Text.bold = (props) => <Text fontWeight="bold" {...props} />;
 Text.thin = (props) => <Text fontWeight="200" {...props} />;
 Text.Desc = (props) => <Text fontSize={responsive('1.8rem', '2.4rem')} {...props} />;
-Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="bold" color="darkGreen" fontSize={responsive('1.85em', '2.86em')} {...props} />)
-Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} color="titleBlue" fontSize={responsive('1.428em', '1.875em')} {...props} />)
+Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="900" color="titleBlue" fontSize={responsive('1.85em', '3.143em')} {...props} />)
+Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" fontSize={responsive('1.428em', '1.875em')} {...props} />)
 
 range(1, 7).forEach((key) => {
   const h = `h${key}`;

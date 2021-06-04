@@ -39,7 +39,8 @@ const disco = '#B71962'
 const titleBlue = '#19376d'
 const bgGreen = '#00796D'
 const darkGreen = '#18776c'
-const textGreen = '#5FC152'
+const lightGreen = '#b7e074'
+const numberGreen = '#9ab965'
 const lime = '#BAE659'
 
 export default {
@@ -59,7 +60,8 @@ export default {
     mandy,
     gigas,
     titleBlue,
-    textGreen,
+    lightGreen,
+    numberGreen,
     blue: prussianBlue,
     milkBlue: brightBlue,
     darkBlue: prussianBlue,

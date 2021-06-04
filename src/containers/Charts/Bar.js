@@ -83,10 +83,10 @@ const Bar = ({ data, isMobile, max, colors }) => {
             style={{
               data: {
                 fill: colors[i],
-                stroke: theme.colors.darkGreen,
+                stroke: theme.colors.titleBlue,
               },
               labels: {
-                fill: colors[i],
+                fill: theme.colors.numberGreen,
                 fontSize: 18
               },
             }}
@@ -98,7 +98,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
         style={{
           grid: {
             fill: 'transparent',
-            stroke: theme.colors.textGreen,
+            stroke: theme.colors.numberGreen,
             strokeWidth: 1,
             strokeDasharray: '2, 5',
           }
@@ -114,8 +114,8 @@ const Bar = ({ data, isMobile, max, colors }) => {
           },
           tickLabels: {
             fontSize: 18,
-            mb: 2
-            // whiteSpace: 'pre-wrap'
+            fontWeight: 700,
+            fill: theme.colors.darkGreen,
           },
         }}
       />
@@ -129,8 +129,8 @@ const Bar = ({ data, isMobile, max, colors }) => {
           labels: { fontSize: 20, fontWeight: 'bold' }
         }}
         data={[
-          { name: '基金', symbol: { fill: theme.colors.darkGreen, type: 'square' } },
-          { name: '指標', symbol: { fill: theme.colors.textGreen, type: 'square' } },
+          { name: '基金', symbol: { fill: colors[1], type: 'square' } },
+          { name: '指標', symbol: { fill: colors[0], type: 'square' } },
         ]}
       />
     </VictoryChart>

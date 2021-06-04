@@ -50,7 +50,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
             {/* <Text.SubTitle textAlign="center" whiteSpace={responsive('auto', 'pre-wrap')}>{title}</Text.SubTitle> */}
           <Box
             width={logoWidth || (length < 4 ? responsive('6.428em', '70%') : responsive('6.428em', 'auto'))}
-            mr={responsive('2em', 0)}
+            pr={responsive('2em', 0)}
             px={responsive(0, '1em')}
             mt={title && "1em"}
             mx="auto"

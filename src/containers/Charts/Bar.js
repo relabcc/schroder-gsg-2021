@@ -59,15 +59,15 @@ const CleanText = ({ children, x, y, style }) => (
   </text>
 )
 
-const barWidhth = (isMobile) => isMobile ? 22 : 14
+const barWidhth = (isMobile) => isMobile ? 22 : 24
 
 const Bar = ({ data, isMobile, max, colors }) => {
   return (
     <VictoryChart
       theme={chartTheme}
       domain={{ y: [0, max + 10] }}
-      width={isMobile ? 600 : 1000}
-      height={isMobile ? 600 : 500}
+      width={isMobile ? 600 : 1200}
+      height={600}
       containerComponent={<VictoryContainer />}
       padding={{
         top: isMobile ? 50 : 10,
@@ -91,7 +91,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
               },
               labels: {
                 fill: colors[i],
-                fontSize: isMobile ? 18 : 12
+                fontSize: 18
               },
             }}
             key={i}
@@ -117,7 +117,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
             strokeDasharray: '2, 5',
           },
           tickLabels: {
-            fontSize: isMobile ? 18 : 14,
+            fontSize: 18,
             mb: 2
             // whiteSpace: 'pre-wrap'
           },

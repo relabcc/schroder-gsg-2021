@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import {
   VictoryChart,
   VictoryBar,
@@ -6,15 +6,11 @@ import {
   VictoryAxis,
   VictoryGroup,
   VictoryContainer,
+  VictoryLegend,
 } from 'victory';
 import merge from 'lodash/merge'
-import get from 'lodash/get'
-import range from 'lodash/range';
 
 import theme from '../../components/ThemeProvider/theme'
-
-import LineBreakText from './LineBreakText'
-
 import withIE from './withIE'
 
 const chartTheme = merge({}, VictoryTheme.grayscale, {
@@ -122,6 +118,20 @@ const Bar = ({ data, isMobile, max, colors }) => {
             // whiteSpace: 'pre-wrap'
           },
         }}
+      />
+      <VictoryLegend
+        x={1100}
+        y={450}
+        centerTitle
+        orientation="vertical"
+        gutter={20}
+        style={{
+          labels: { fontSize: 20, fontWeight: 'bold' }
+        }}
+        data={[
+          { name: '基金', symbol: { fill: theme.colors.darkGreen, type: 'square' } },
+          { name: '指標', symbol: { fill: theme.colors.textGreen, type: 'square' } },
+        ]}
       />
     </VictoryChart>
   )

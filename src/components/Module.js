@@ -51,7 +51,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
         >
             {/* <Text.SubTitle textAlign="center" whiteSpace={responsive('auto', 'pre-wrap')}>{title}</Text.SubTitle> */}
           <Box
-            width={logoWidth || (length < 4 ? responsive('6.428em', '70%') : responsive('6.428em', 'auto'))}
+            width={logoWidth || (length < 4 ? responsive('6.428em', '50%') : responsive('6.428em', '70%'))}
             px={responsive(0, '1em')}
             mr={responsive('2em', 'auto')}
             mt={title && "1em"}
@@ -67,14 +67,14 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                 alignItems="center"
                 justifyContent={responsive('flex-start', 'center')}
               >
-                <Text.SubTitle
+                <Text.ModuleTitle
                   ref={refs[k]}
                   whiteSpace="pre-wrap"
                   textAlign="left"
-                >{label}</Text.SubTitle>
+                >{label}</Text.ModuleTitle>
               </Flex>
               )}
-              <Text px="0.375em" whiteSpace="pre-wrap">{text}</Text>
+              <Text px="1em" whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

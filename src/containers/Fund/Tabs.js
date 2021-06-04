@@ -110,7 +110,7 @@ const FundTabs = ({ selectedIndex, onSelect, secPt, sticky }) => {
           <TabPanel key={i}>
             {data.map(({ title, Comp, source }, k) =>(
               <Box key={k}>
-                <Text fontWeight="bold" fontSize={responsive('1.285em', '1.57em')} pt={responsive('2rem', '3rem')} pb="2rem">{title}</Text>
+                <Text.SubTitle color="darkGreen" pt={responsive('2rem', '3rem')} pb="2rem">{title}</Text.SubTitle>
                 <Comp isMobile={isMobile} />
                 {source && <Source>{source}</Source>}
               </Box>

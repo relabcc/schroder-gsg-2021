@@ -115,7 +115,6 @@ const Bar = ({ data, isMobile, max, colors }) => {
           tickLabels: {
             fontSize: 18,
             fontWeight: 700,
-            fill: theme.colors.darkGreen,
           },
         }}
       />

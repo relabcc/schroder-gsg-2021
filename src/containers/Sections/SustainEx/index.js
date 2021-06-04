@@ -9,14 +9,17 @@ import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 
 import photo1 from './3-1.png'
 import photo2 from './3-2.png'
+import mobilephoto2 from './mobile-3-2.png'
 
 const photo = [
   {
     src: photo1,
+    mobile_src: photo1,
     // width: responsive('100%', '75%')
   },
   {
     src: photo2,
+    mobile_src: mobilephoto2,
     // width: responsive('100%', '75%')
   }
 ]
@@ -31,7 +34,7 @@ const SustainEx = ({ innerRef }) => {
         <Text.Desc>以量化來評估企業在各個面向對外部性的影響，透過SustainEx模組分析並給予永續評分。作為投資團隊管理投資組合的重要依據之一。</Text.Desc>
         {photo.map((d, i) => (
           <Box mx="auto" width={responsive('100%', '75%')} mt={responsive('1em', '2em')} key={i}>
-            <Image src={d.src} />
+            <Image src={isMobile ? d.mobile_src : d.src} />
           </Box>
         ))}
       </Container>

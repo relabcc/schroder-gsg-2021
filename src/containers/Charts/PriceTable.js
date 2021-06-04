@@ -29,12 +29,12 @@ const PriceTable = ({ isMobile }) => {
         const priceData = {
           th: [...table.map(d => d[0])],
           tbody: range((table[0].length - 1)).map(index => [...table.map(d => d[index + 1])]),
-          color: ['darkBlue', 'darkBlue', 'black', 'textGreen']
+          color: ['darkBlue', 'darkBlue', 'black', 'lightGreen']
         }
         const priceDataMobile= {
           th: [...table[0].slice(0, 2), ...table[0].slice(3)],
           tbody: table.slice(1).map(d => [...d.slice(0, 2), ...d.slice(3)]),
-          color: ['darkBlue', 'darkBlue', 'black', 'textGreen']
+          color: ['darkBlue', 'darkBlue', 'black', 'lightGreen']
         }
         // ['累積報酬, \n美元報酬 \n(%)', '施羅德(環)\n環球永續增長', '四分位\n排名', '同類型基金平均\n(86檔)', 'MSCI AC World Index'],
         return (

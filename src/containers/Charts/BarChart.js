@@ -9,7 +9,7 @@ import theme from '../../components/ThemeProvider/theme';
 
 const toNumber = /[^%]+/
 
-const BarChart = ({ isMobile, index, dataPath, fill }) => {
+const BarChart = ({ isMobile, dataPath }) => {
   return (
     <Data path={dataPath}>
       {(data) => {

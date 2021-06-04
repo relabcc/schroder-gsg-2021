@@ -32,7 +32,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
   }, [refs])
   return (
     <Flex
-      mx={responsive(0, '-1em')}
+      mx={responsive(0, '-2em')}
       alignItems={responsive('center', 'flex-start')}
       mt={responsive('2em', '1.25em')}
       flexDirection={responsive('column', vertical ? 'column' : 'row')}
@@ -40,7 +40,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
     >
       {content.map(({ src, title, label, text }, k, { length }) => (
         <Flex
-          mx="1em"
+          mx="2em"
           mt={responsive('1em', '2em')}
           pb={responsive('0.5em', '1em')}
           alignItems="center"
@@ -74,7 +74,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                 >{label}</Text.ModuleTitle>
               </Flex>
               )}
-              <Text px="1em" whiteSpace="pre-wrap">{text}</Text>
+              <Text whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

@@ -41,7 +41,7 @@ const Intro = ({ isLaptop, isMobile }) => {
         <Container
           pt={responsive('2em', '2em', '4em', '8em')}
           px={30}
-          pb={['14em', null, '20em', '25em', '4em', null, '10em']}
+          pb={['3em', null, '20em', '25em', '4em', null, '10em']}
           color="white"
         >
           <Flex alignItems="stretch" flexDirection={responsive('column', 'row')}>

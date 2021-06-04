@@ -29,7 +29,8 @@ const Text = styled(tag)`
 Text.defaultProps = {
   is: 'p',
   fontSize: responsive('1.15em', '1.25em'),
-  lineHeight: 1.75,
+  lineHeight: 1.5,
+  letterSpacing: '0.1em',
   blacklist,
 };
 

@@ -84,7 +84,7 @@ const sections = [
       //   text: 'MSCI ESG排名全球前5%（34,000檔基金）',
       // },
     ],
-    source: '資Source: UN, Environmental Finance, Morningstar, MSCI, Schroders, 2021/4/30'
+    source: '資料來源：UN, Environmental Finance, Morningstar, MSCI, Schroders, 2021/4/30.'
   },
 ]
 
@@ -97,16 +97,16 @@ const ESG = ({ innerRef }) => {
           <Box mt={i && '3em'} key={i}>
             <Text.Title lineHeight="2">{title}</Text.Title>
             <Text.Desc whiteSpace="pre-wrap">{desc}</Text.Desc>
-            {subtitle && <Text.SubTitle mt="1em">{subtitle}</Text.SubTitle>}
+            {subtitle && <Text.SubTitle color="darkGreen" mt="1em">{subtitle}</Text.SubTitle>}
             <Module
               content={content}
               logoWidth={logoWidth}
             />
-            <Source fontSize={responsive('0.875em', '1m')}>{source}</Source>
+            <Source>{source}</Source>
           </Box>
         ))}
         <Box mt="2em">
-          <Text.SubTitle>亮眼的投資表現</Text.SubTitle>
+          <Text.SubTitle color="darkGreen">亮眼的投資表現</Text.SubTitle>
           <Box mt="1em">
             <Image src={chart} />
           </Box>

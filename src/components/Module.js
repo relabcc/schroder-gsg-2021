@@ -1,13 +1,15 @@
 import React, { useState, useMemo, createRef, useEffect } from 'react'
-import { useMeasure } from "react-use";
+
 
 import Box from './Box'
 import Flex from './Flex'
 import Image from './Image'
 import Text from './Text'
 import { responsive } from './ThemeProvider/theme'
+import useResponsive from '../contexts/mediaQuery/useResponsive';
 
 const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
+  const { isMobile } = useResponsive()
   const refs = useMemo(() => content.map(() => createRef()), [content]);
   const [maxHeight, setMaxHeight] = useState()
   useEffect(() => {
@@ -57,11 +59,11 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
           >
             <Image src={src} />
           </Box>
-          <Box flex={1}>
+          <Box flex={1} mt={responsive('0', '1em')}>
             {label && (
               <Flex
-                style={{ height: maxHeight }}
-                my={responsive('0.5em', '1em')}
+                style={{ height: isMobile ? 'auto' : maxHeight }}
+                my={responsive('0.375em', '1em')}
                 alignItems="center"
                 justifyContent={responsive('flex-start', 'center')}
               >
@@ -72,7 +74,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                 >{label}</Text.SubTitle>
               </Flex>
               )}
-              <Text>{text}</Text>
+              <Text whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

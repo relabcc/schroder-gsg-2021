@@ -27,7 +27,7 @@ const SustainEx = ({ innerRef }) => {
     <Box ref={innerRef}>
       <Container py={responsive('2.86em', '7.143em')}>
         <Text.Title>獨家量化分析工具－SustainEx</Text.Title>
-        <Text>以量化來評估企業在各個面向對外部性的影響，透過SustainEx模組分析並給予永續評分。作為投資團隊管理投資組合的重要依據之一。</Text>
+        <Text.Desc>以量化來評估企業在各個面向對外部性的影響，透過SustainEx模組分析並給予永續評分。作為投資團隊管理投資組合的重要依據之一。</Text.Desc>
         {photo.map((d, i) => (
           <Box mx="auto" width={d.width} mt={responsive('1em', '2em')} key={i}>
             <Image src={d.src} />

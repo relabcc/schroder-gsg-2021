@@ -41,7 +41,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
       {content.map(({ src, title, label, text }, k, { length }) => (
         <Flex
           mx="1em"
-          mt={responsive('1em', 0)}
+          mt={responsive('1em', '2em')}
           pb={responsive('0.5em', '1em')}
           alignItems="center"
           flexDirection={responsive('row', 'column')}

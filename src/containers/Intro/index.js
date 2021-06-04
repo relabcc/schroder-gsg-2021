@@ -55,10 +55,11 @@ const Intro = ({ isLaptop, isMobile }) => {
               </Text>
             </Box>
             <Flex
-              width={1 / 2}
+              width={responsive(1, 1 / 2)}
               ml={responsive(0, '1em')}
               flexDirection="column"
               border="1px solid black"
+              height={responsive('200px', 'auto')}
             >
               <Box flex={1} py={responsive('1em', '2em')}></Box>
             </Flex>

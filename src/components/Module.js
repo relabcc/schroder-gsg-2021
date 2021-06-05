@@ -1,5 +1,5 @@
 import React, { useState, useMemo, createRef, useEffect } from 'react'
-
+import ResizeObserver from 'resize-observer-polyfill'
 
 import Box from './Box'
 import Flex from './Flex'
@@ -16,13 +16,15 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
     const resizeObserver = new ResizeObserver(entries => {
       let maxH = 0
       for (let entry of entries) {
+        // console.log(entries)
         if (entry.contentBoxSize) {
           // Firefox implements `contentBoxSize` as a single content rect, rather than an array
           const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
           // console.log(contentBoxSize.blockSize)
           maxH = Math.max(maxH, contentBoxSize.blockSize)
         } else {
-          console.log(entry)
+          const contentRectH = entry.contentRect.height
+          maxH = Math.max(maxH, contentRectH)
         }
       }
       setMaxHeight(maxH)

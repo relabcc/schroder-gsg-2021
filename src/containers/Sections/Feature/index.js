@@ -122,15 +122,15 @@ const Feature = ({ innerRef }) => {
         <Box key={i}>
           <Title title={title} src={src} step={step}  />
           <Container py="3em">
-            <Text.Desc>{text}</Text.Desc>
+            <Text>{text}</Text>
             {content.map((d, i) => isArray(d) ? (
               <Box mt={responsive('1em', '2em')} key={i}>
-                {subTitle && <Text.SubTitle>({i + 1}){subTitle[i]}</Text.SubTitle>}
+                {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}
                 <Module content={d} logoWidth={logoWidth} />
               </Box>
             ) : (
               <Box mt={responsive('1em', '2em')} key={i}>
-                {subTitle && <Text.SubTitle>({i + 1}){subTitle[i]}</Text.SubTitle>}
+                {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}
                 <Box mt="1em">
                   <Image src={d} />
                 </Box>

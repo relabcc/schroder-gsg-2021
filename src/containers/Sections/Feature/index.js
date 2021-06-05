@@ -122,13 +122,13 @@ const Feature = ({ innerRef }) => {
     <Box ref={innerRef}>
       <Container pb={responsive('1em', '3em')}>
         <Box.Title>施羅德(環)環球永續增長基金三大特色</Box.Title>
-        <Module content={sets} logoWidth={responsive('6.428em', '65%')} />
+        <Module bigTitle bigText content={sets} logoWidth={responsive('6.428em', '65%')} />
       </Container>
       {data.map(({ title, step, src, subTitle, text, logoWidth, content }, i) => (
         <Box key={i}>
           <Title title={title} src={src} step={step}  />
           <Container py="3em">
-            <Text>{text}</Text>
+            <Text.SmallDesc>{text}</Text.SmallDesc>
             {content.map((d, i) => isArray(d) ?  (
               <Box mt={responsive('1em', '2em')} key={i}>
                 {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}

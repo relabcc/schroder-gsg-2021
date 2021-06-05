@@ -8,7 +8,7 @@ import Text from './Text'
 import { responsive } from './ThemeProvider/theme'
 import useResponsive from '../contexts/mediaQuery/useResponsive';
 
-const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
+const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ...props }) => {
   const { isMobile } = useResponsive()
   const refs = useMemo(() => content.map(() => createRef()), [content]);
   const [maxHeight, setMaxHeight] = useState()
@@ -72,11 +72,12 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                 <Text.ModuleTitle
                   ref={refs[k]}
                   whiteSpace="pre-wrap"
-                  textAlign="left"
+                  textAlign={responsive('left', 'center')}
+                  fontSize={bigTitle ? responsive('2rem', '2.8rem') : responsive('1.8rem', '2.4rem')}
                 >{label}</Text.ModuleTitle>
               </Flex>
               )}
-              <Text whiteSpace="pre-wrap">{text}</Text>
+              <Text fontSize={bigText && responsive('1.8rem', '2.4rem')} whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

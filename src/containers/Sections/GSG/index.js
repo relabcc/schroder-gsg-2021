@@ -29,6 +29,7 @@ const sections = [
   {
     title: '永續投資的重要性',
     desc: '四大動力，推升永續投資為全球投資焦點。',
+    logoWidth: responsive('6.428em', '90%'),
     content: [
       {
         src: ESG1,
@@ -57,6 +58,7 @@ const sections = [
     title: '永續投資首選施羅德',
     desc: '施羅德已將ESG貫徹於所有基金投資策略中，堅信重視「永續性」的企業，其商業模式也擁有潛藏的韌性，更能支持公司持續成長。\n\n施羅德(環)環球永續增長基金，將「永續發展」設為投資主要標準，為全方位的永續投資旗艦型股票基金。',
     subtitle: '來自內外的永續認證',
+    logoWidth: responsive('6.428em', '70%'),
     content: [
       {
         src: ESG2_1,
@@ -101,6 +103,8 @@ const ESG = ({ innerRef }) => {
             <Module
               content={content}
               logoWidth={logoWidth}
+              bigTitle
+              bigText
             />
             <Source>{source}</Source>
           </Box>

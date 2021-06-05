@@ -120,7 +120,7 @@ const Feature = ({ innerRef }) => {
 
   return (
     <Box ref={innerRef}>
-      <Container pb={responsive('1em', '3em')}>
+      <Container pb="3em">
         <Box.Title>施羅德(環)環球永續增長基金三大特色</Box.Title>
         <Module bigTitle bigText content={sets} logoWidth={responsive('6.428em', '65%')} />
       </Container>
@@ -130,12 +130,12 @@ const Feature = ({ innerRef }) => {
           <Container py="3em">
             <Text.SmallDesc>{text}</Text.SmallDesc>
             {content.map((d, i) => isArray(d) ?  (
-              <Box mt={responsive('1em', '2em')} key={i}>
+              <Box mt={responsive('3em', '2em')} key={i}>
                 {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}
                 <Module content={d} logoWidth={logoWidth} />
               </Box>
             ) : (
-              <Box mt={responsive('1em', '2em')} key={i}>
+              <Box mt={responsive('3em', '2em')} key={i}>
                 {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}
                 <Box mt="1em">
                   <Image src={isMobile ? (d.mobileSrc || d.src) : d.src} />

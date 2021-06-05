@@ -18,6 +18,7 @@ import icon2_1_1 from './2-1-1.png'
 import icon2_1_2 from './2-1-2.png'
 import icon2_1_3 from './2-1-3.png'
 import icon2_2_1 from './2-2-1.png'
+import mobileicon2_2_1 from './mobile-2-2-1.png'
 import icon2_2_2_1 from './2-2-2-1.png'
 import icon2_2_2_2 from './2-2-2-2.png'
 import icon2_2_2_3 from './2-2-2-3.png'
@@ -73,7 +74,10 @@ const data = [
     text: '將企業的「永續競爭力」評估設定於投資目標中，投資流程中則利用集團永續評等工具(SustainEx)協助經理人管理投組。除了傳統的企業獲利評估外，加入永續因子考量，挑選能夠面對永續浪潮下而能維持長期經營的標的。',
     subTitle: ['主動排除爭議性產業，有助投資人避開未來潛藏的ESG永續風險', '質化深入分析－永續評分架構'],
     content: [
-      icon2_2_1,
+      {
+        src: icon2_2_1,
+        mobileSrc: mobileicon2_2_1
+      },
       [
         {
           label: '對環境的尊重',
@@ -104,13 +108,15 @@ const data = [
     text: '結合集團研究資源，分析師、數據團隊，以及專長於永續投資的分析專家們，本基金由ESG永續團隊+全球股票團隊共同管理。除了尋找投資機會，也透過投資者的影響力積極參與議合，鼓勵引導企業以永續發展為經營策略。',
     src: icon2_3,
     content: [
-      icon2_3_1
+      {
+        src: icon2_3_1
+      }
     ]
   }
 ]
 
 const Feature = ({ innerRef }) => {
-  // const { isMobile } = useResponsive()
+  const { isMobile } = useResponsive()
 
   return (
     <Box ref={innerRef}>
@@ -123,7 +129,7 @@ const Feature = ({ innerRef }) => {
           <Title title={title} src={src} step={step}  />
           <Container py="3em">
             <Text>{text}</Text>
-            {content.map((d, i) => isArray(d) ? (
+            {content.map((d, i) => isArray(d) ?  (
               <Box mt={responsive('1em', '2em')} key={i}>
                 {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}
                 <Module content={d} logoWidth={logoWidth} />
@@ -132,7 +138,7 @@ const Feature = ({ innerRef }) => {
               <Box mt={responsive('1em', '2em')} key={i}>
                 {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}
                 <Box mt="1em">
-                  <Image src={d} />
+                  <Image src={isMobile ? (d.mobileSrc || d.src) : d.src} />
                 </Box>
               </Box>
             ))}

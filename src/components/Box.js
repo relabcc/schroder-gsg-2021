@@ -56,7 +56,7 @@ Box.fullAbs = (props) => <Box position="absolute" top="0" bottom="0" left="0" ri
 Box.absCenter = (props) => <Box position="absolute" top="50%" left="50%" {...props} />;
 Box.SubTitle = forwardRef((props, ref) => <Box ref={ref} fontWeight="bold" color="titleBlue" fontSize={responsive('1.5em', '1.875em')} {...props} />)
 Box.Title = forwardRef(({ children , ...props}, ref) => (
-  <Box ref={ref} pb="0.25em" mb="1em" borderBottom={responsive('5px solid', '10px solid')} color="titleBlue" {...props}>
+  <Box ref={ref} pb="0.25em" mb="2rem" borderBottom={responsive('5px solid', '10px solid')} color="titleBlue" {...props}>
     <Text.Title>{children}</Text.Title>
   </Box>
 ))

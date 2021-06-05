@@ -9,7 +9,7 @@ import { responsive } from './ThemeProvider/theme'
 
 const Title = ({ src, step, title, ...props }) => {
   return (
-    <Box bg="gray" py={responsive('1.5rem', '2.5rem')} {...props}>
+    <Box bg="gray" py={responsive('3rem', '2rem')} {...props}>
       <Container>
         <Flex alignItems="center">
           {src && (

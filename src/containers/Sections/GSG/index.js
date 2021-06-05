@@ -92,12 +92,12 @@ const ESG = ({ innerRef }) => {
   const { isMobile } = useResponsive()
   return (
     <Box ref={innerRef}>
-      <Container py='1em'>
+      <Container pt={responsive('2em', '3em')}>
         {sections.map(({ title, desc, content, source, logoWidth, subtitle }, i) => (
           <Box mt={i && '3em'} key={i}>
             <Box.Title>{title}</Box.Title>
             <Text.Desc whiteSpace="pre-wrap">{desc}</Text.Desc>
-            {subtitle && <Text.SubTitle color="darkGreen" mt="1em">{subtitle}</Text.SubTitle>}
+            {subtitle && <Text.SubTitle mt="1em">{subtitle}</Text.SubTitle>}
             <Module
               content={content}
               logoWidth={logoWidth}
@@ -106,7 +106,7 @@ const ESG = ({ innerRef }) => {
           </Box>
         ))}
         <Box mt="2em">
-          <Text.SubTitle color="darkGreen">亮眼的投資表現</Text.SubTitle>
+          <Text.SubTitle>亮眼的投資表現</Text.SubTitle>
           <Box mt="1em">
             <Image src={chart} />
           </Box>

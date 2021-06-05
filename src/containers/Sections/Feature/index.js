@@ -120,7 +120,7 @@ const Feature = ({ innerRef }) => {
 
   return (
     <Box ref={innerRef}>
-      <Container pt={responsive('2.86em', '7.143em')} pb={responsive('1em', '3em')}>
+      <Container pb={responsive('1em', '3em')}>
         <Box.Title>施羅德(環)環球永續增長基金三大特色</Box.Title>
         <Module content={sets} logoWidth={responsive('6.428em', '65%')} />
       </Container>

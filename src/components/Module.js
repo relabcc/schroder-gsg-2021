@@ -69,11 +69,11 @@ const Module = ({ content, logoWidth, vertical, leftWidth, ...props }) => {
                 alignItems="center"
                 justifyContent={responsive('flex-start', 'center')}
               >
-                <Text.SubTitle
+                <Text.ModuleTitle
                   ref={refs[k]}
                   whiteSpace="pre-wrap"
                   textAlign="left"
-                >{label}</Text.SubTitle>
+                >{label}</Text.ModuleTitle>
               </Flex>
               )}
               <Text whiteSpace="pre-wrap">{text}</Text>

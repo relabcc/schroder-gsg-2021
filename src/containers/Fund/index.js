@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import 'react-tabs/style/react-tabs.css';
 
 import Container from '../../components/Container'
-import Text from '../../components/Text'
+import Box from '../../components/Box'
 import Title from '../../components/Title'
 import { responsive } from '../../components/ThemeProvider/theme'
 
@@ -14,12 +14,10 @@ const Fund = () => {
   const [activeTab, setActiveTab] = useState(0)
 
   return (
-    <>
-      <Title title="基金資料" />
-      <Container py={responsive('2.86em', '7.143em')}>
-        <FundTabs selectedIndex={activeTab} onSelect={setActiveTab} />
-      </Container>
-    </>
+    <Container py={responsive('2.86em', '7.143em')}>
+      <Box.Title>基金資料</Box.Title>
+      <FundTabs selectedIndex={activeTab} onSelect={setActiveTab} />
+    </Container>
   )
 }
 

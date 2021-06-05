@@ -38,7 +38,7 @@ const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkG
                 py="1em"
                 fontWeight="bold"
                 bg={getResponsive(k ? 'white' : bg, 'white')}
-                color={getResponsive(k ? (k == h.length - 1 ? 'textGreen' : 'black') : 'white', nowData.color[i])}
+                color={getResponsive(k ? (k == h.length - 1 ? 'lightGreen' : 'black') : 'white', nowData.color[i])}
                 borderBottom={responsive('none', '1px solid black')}
                 textAlign={getResponsive('center', tbodyAlign ? tbodyAlign : k ? 'right' : 'left')}
                 key={k}

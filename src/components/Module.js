@@ -68,6 +68,7 @@ const Module = ({ content, logoWidth, leftWidth, bigTitle, bigText, ...props }) 
                 <Text.ModuleTitle
                   ref={refs[k]}
                   whiteSpace="pre-wrap"
+                  textAlign={responsive('left', 'center')}
                   fontSize={bigTitle ? responsive('2rem', '2.8rem') : responsive('1.8rem', '2.4rem')}
                 >{label}</Text.ModuleTitle>
               </Flex>

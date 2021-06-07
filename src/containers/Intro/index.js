@@ -3,17 +3,13 @@ import React from 'react'
 import Container from '../../components/Container'
 import Box from '../../components/Box'
 import Flex from '../../components/Flex'
-import Button from '../../components/Button'
+// import Button from '../../components/Button'
 import Text from '../../components/Text'
-import Arrow from '../../components/Arrow'
+// import Arrow from '../../components/Arrow'
+import Video from '../../components/Video'
 import BackgroundImage from '../../components/BackgroundImage'
 
 import { responsive } from '../../components/ThemeProvider/theme'
-
-import cover from './cover.jpg'
-// import coverWebP from './cover.webp'
-import mobilecover from './mobile-cover.jpg'
-// import mobilecoverWebP from './mobile-cover.webp'
 
 const scrollToName = (isMobile) => {
   window.gaTrackClick('了解更多')
@@ -44,7 +40,7 @@ const Intro = ({ isLaptop, isMobile }) => {
           pb={responsive('2em', '4em', '8em')}
           color="white"
         >
-          <Flex alignItems="stretch" flexDirection={responsive('column', 'row')}>
+          <Flex alignItems="center" flexDirection={responsive('column', 'row')}>
             <Box>
               <Text fontSize={responsive('2em', '2.5em', '2.75em')} fontWeight="900">除了獲利 更能受益</Text>
               <Text my="1em" fontSize={responsive('1.25em', '1.5em', '1.75em')}>
@@ -52,15 +48,12 @@ const Intro = ({ isLaptop, isMobile }) => {
                 我們相信永續投資追求的不僅是獲利，更能讓社會受益。<br />
               </Text>
             </Box>
-            <Flex
+            <Box
               width={responsive(1, 1 / 2)}
-              ml={responsive(0, '1em')}
-              flexDirection="column"
-              border="1px solid black"
-              height={responsive('200px', 'auto')}
+              ml={responsive(0, '3rem')}
             >
-              <Box flex={1} py={responsive('1em', '2em')}></Box>
-            </Flex>
+              <Video />
+            </Box>
           </Flex>
         </Container>
       </BackgroundImage>

@@ -73,7 +73,7 @@ const Module = ({ content, logoWidth, leftWidth, bigTitle, bigText, ...props }) 
                 >{label}</Text.ModuleTitle>
               </Flex>
             )}
-            <Flex justifyContent="center">
+            <Flex justifyContent={responsive('flex-start', 'center')}>
               <Text textAlign="left" whiteSpace="pre-wrap">{text}</Text>
             </Flex>
           </Box>

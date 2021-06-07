@@ -16,7 +16,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ..
     const resizeObserver = new ResizeObserver(entries => {
       let maxH = 0
       for (let entry of entries) {
-        // console.log(entries)
+        console.log(entries)
         if (entry.contentBoxSize) {
           // Firefox implements `contentBoxSize` as a single content rect, rather than an array
           const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;

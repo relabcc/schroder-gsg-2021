@@ -27,7 +27,8 @@ window.injectCSS = cssLink => {
 }
 
 const getContianer = () => {
-  const target = document.getElementById('gci2020-tw-root');
+  const target = document.getElementById('gsg2021-tw-root');
+  window.__video = target.querySelector('[data-bynder-widget]')
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));
   if (found.classList.contains('panel-white')) {
     found.classList.remove('panel-white')

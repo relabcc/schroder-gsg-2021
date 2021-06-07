@@ -6,24 +6,25 @@ import Flex from '../../components/Flex'
 // import Button from '../../components/Button'
 import Text from '../../components/Text'
 // import Arrow from '../../components/Arrow'
-import Video from '../../components/Video'
 import BackgroundImage from '../../components/BackgroundImage'
 
 import { responsive } from '../../components/ThemeProvider/theme'
 
-const scrollToName = (isMobile) => {
-  window.gaTrackClick('了解更多')
-  const tab = document.querySelector('.flexible-tab-container')
-  let fundsPos = document.getElementById('fund-head').getBoundingClientRect().top
-  if (!isMobile) {
-    if (tab.classList.contains('flexible-fixed-header')) {
-      fundsPos -= 40
-    } else {
-      fundsPos -= 120
-    }
-  }
-  window.scrollBy({ left: 0, top: fundsPos, behavior: 'smooth' })
-}
+import Video from './Video'
+
+// const scrollToName = (isMobile) => {
+//   window.gaTrackClick('了解更多')
+//   const tab = document.querySelector('.flexible-tab-container')
+//   let fundsPos = document.getElementById('fund-head').getBoundingClientRect().top
+//   if (!isMobile) {
+//     if (tab.classList.contains('flexible-fixed-header')) {
+//       fundsPos -= 40
+//     } else {
+//       fundsPos -= 120
+//     }
+//   }
+//   window.scrollBy({ left: 0, top: fundsPos, behavior: 'smooth' })
+// }
 
 const Intro = ({ isLaptop, isMobile }) => {
   return (

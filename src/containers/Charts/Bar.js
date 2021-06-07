@@ -72,28 +72,6 @@ const Bar = ({ data, isMobile, max, colors }) => {
         right: 40,
       }}
     >
-      <VictoryGroup
-        horizontal
-        offset={barWidhth(isMobile) + 1}
-        style={{ data: { width: barWidhth(isMobile) } }}
-      >
-        {data.map((d, i) => (
-          <VictoryBar
-            data={d}
-            style={{
-              data: {
-                fill: colors[i],
-                stroke: theme.colors.titleBlue,
-              },
-              labels: {
-                fill: theme.colors.numberGreen,
-                fontSize: 18
-              },
-            }}
-            key={i}
-          />
-        ))}
-      </VictoryGroup>
       <VictoryAxis
         style={{
           grid: {
@@ -118,6 +96,28 @@ const Bar = ({ data, isMobile, max, colors }) => {
           },
         }}
       />
+      <VictoryGroup
+        horizontal
+        offset={barWidhth(isMobile) + 1}
+        style={{ data: { width: barWidhth(isMobile) } }}
+      >
+        {data.map((d, i) => (
+          <VictoryBar
+            data={d}
+            style={{
+              data: {
+                fill: colors[i],
+                stroke: theme.colors.titleBlue,
+              },
+              labels: {
+                fill: theme.colors.numberGreen,
+                fontSize: 18
+              },
+            }}
+            key={i}
+          />
+        ))}
+      </VictoryGroup>
       <VictoryLegend
         x={isMobile ? 510 : 1100}
         y={450}

@@ -77,7 +77,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ..
                 >{label}</Text.ModuleTitle>
               </Flex>
               )}
-              <Text fontSize={bigText && responsive('1.8rem', '2.4rem')} whiteSpace="pre-wrap">{text}</Text>
+              <Text whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

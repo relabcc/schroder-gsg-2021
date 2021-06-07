@@ -128,7 +128,7 @@ const Feature = ({ innerRef }) => {
         <Box key={i}>
           <Title title={title} src={src} step={step}  />
           <Container py="3em">
-            <Text.SmallDesc>{text}</Text.SmallDesc>
+            <Text.Desc>{text}</Text.Desc>
             {content.map((d, i) => isArray(d) ?  (
               <Box mt={responsive('3em', '2em')} key={i}>
                 {subTitle && <Text.SmallTitle>{subTitle[i]}</Text.SmallTitle>}

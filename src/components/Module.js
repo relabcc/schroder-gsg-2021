@@ -57,7 +57,7 @@ const Module = ({ content, logoWidth, leftWidth, bigTitle, bigText, ...props }) 
           >
             <Image src={src} />
           </Box>
-          <Box mt={responsive('0', '1em')} width="100%">
+          <Box display="block" mt={responsive('0', '1em')} width="100%">
             {label && (
               <Flex
                 style={{ height: isMobile ? 'auto' : maxHeight }}
@@ -68,12 +68,13 @@ const Module = ({ content, logoWidth, leftWidth, bigTitle, bigText, ...props }) 
                 <Text.ModuleTitle
                   ref={refs[k]}
                   whiteSpace="pre-wrap"
-                  textAlign={responsive('left', 'center')}
                   fontSize={bigTitle ? responsive('2rem', '2.8rem') : responsive('1.8rem', '2.4rem')}
                 >{label}</Text.ModuleTitle>
               </Flex>
             )}
-            <Text whiteSpace="pre-wrap">{text}</Text>
+            <Flex justifyContent="center">
+              <Text textAlign="left" whiteSpace="pre-wrap">{text}</Text>
+            </Flex>
           </Box>
         </Flex>
       ))}

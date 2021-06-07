@@ -8,7 +8,7 @@ import Text from './Text'
 import { responsive } from './ThemeProvider/theme'
 import useResponsive from '../contexts/mediaQuery/useResponsive';
 
-const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ...props }) => {
+const Module = ({ content, logoWidth, leftWidth, bigTitle, bigText, ...props }) => {
   const { isMobile } = useResponsive()
   const refs = useMemo(() => content.map(() => createRef()), [content]);
   const [maxHeight, setMaxHeight] = useState()
@@ -16,7 +16,6 @@ const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ..
     const resizeObserver = new ResizeObserver(entries => {
       let maxH = 0
       for (let entry of entries) {
-        console.log(entries)
         if (entry.contentBoxSize) {
           // Firefox implements `contentBoxSize` as a single content rect, rather than an array
           const contentBoxSize = Array.isArray(entry.contentBoxSize) ? entry.contentBoxSize[0] : entry.contentBoxSize;
@@ -35,23 +34,20 @@ const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ..
   return (
     <Flex
       mx={responsive(0, '-2em')}
-      alignItems={responsive('center', 'flex-start')}
       mt={responsive('2em', '1.25em')}
-      flexDirection={responsive('column', vertical ? 'column' : 'row')}
+      display={responsive('block', 'flex')}
       {...props}
     >
       {content.map(({ src, title, label, text }, k, { length }) => (
         <Flex
-          mx="2em"
+          mx={responsive(0, '2em')}
           mt={responsive('1em', '2em')}
           pb={responsive('0.5em', '1em')}
           alignItems="center"
-          flexDirection={responsive('row', 'column')}
-          width={responsive(1, vertical ? 1 : 1 / length)}
-          height="100%"
+          display={responsive('flex', 'block')}
+          width={responsive(1, 1 / length)}
           key={k}
         >
-            {/* <Text.SubTitle textAlign="center" whiteSpace={responsive('auto', 'pre-wrap')}>{title}</Text.SubTitle> */}
           <Box
             width={logoWidth || (length < 4 ? responsive('6.428em', '50%') : responsive('6.428em', '70%'))}
             px={responsive(0, '1em')}
@@ -61,7 +57,7 @@ const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ..
           >
             <Image src={src} />
           </Box>
-          <Box flex={1} mt={responsive('0', '1em')}>
+          <Box mt={responsive('0', '1em')} width="100%">
             {label && (
               <Flex
                 style={{ height: isMobile ? 'auto' : maxHeight }}
@@ -76,8 +72,8 @@ const Module = ({ content, logoWidth, vertical, leftWidth, bigTitle, bigText, ..
                   fontSize={bigTitle ? responsive('2rem', '2.8rem') : responsive('1.8rem', '2.4rem')}
                 >{label}</Text.ModuleTitle>
               </Flex>
-              )}
-              <Text whiteSpace="pre-wrap">{text}</Text>
+            )}
+            <Text whiteSpace="pre-wrap">{text}</Text>
           </Box>
         </Flex>
       ))}

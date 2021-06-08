@@ -7,7 +7,6 @@ import Arrow from '../../components/Arrow'
 import { responsive } from '../../components/ThemeProvider/theme'
 
 const BackToTop = ({ isSticky, distanceFromBottom, ...props }) => {
-  console.log(isSticky, distanceFromBottom)
   return (
     <Box textAlign="right" px={!isSticky && "1em"} position={isSticky ? 'fixed' : 'relative'} bottom={isSticky && "1em"} right={isSticky && "1em"} {...props}>
       <Button.transparent

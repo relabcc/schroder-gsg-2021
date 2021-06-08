@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Container from '../../components/Container'
+import Box from '../../components/Box'
 import Button from '../../components/Button'
 import Arrow from '../../components/Arrow'
 
@@ -8,9 +8,10 @@ import { responsive } from '../../components/ThemeProvider/theme'
 
 const BackToTop = () => {
   return (
-    <Container textAlign="center" pb="4em">
+    <Box position="fixed" right="1em" bottom="2em">
         <Button.transparent
           fontSize={responsive('1em', '1.5em')}
+          px="0"
           onClick={() => {
             window.scrollTo({ let: 0, top: 0, behavior: 'smooth' })
             window.gaTrackClick('返回頂端')
@@ -20,7 +21,7 @@ const BackToTop = () => {
           <br />
           返回頂端
         </Button.transparent>
-    </Container>
+    </Box>
   )
 }
 

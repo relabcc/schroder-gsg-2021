@@ -17,6 +17,7 @@ import ESG2_1 from './1-2-1.png'
 import ESG2_2 from './1-2-2.png'
 import ESG2_3 from './1-2-3.png'
 import chart from './1-3.png'
+import mobile_chart from './mobile-1-3.png'
 
 // import Table from '../Charts/Table'
 
@@ -112,7 +113,7 @@ const ESG = ({ innerRef }) => {
         <Box mt="2em">
           <Text.SubTitle>亮眼的投資表現</Text.SubTitle>
           <Box mt="1em">
-            <Image src={chart} />
+            <Image src={isMobile ? mobile_chart : chart} />
           </Box>
           <Source>資料來源：Lipper, USD, as of 2021/4/30. 本基金參考指標為MSCI AC World Index.</Source>
         </Box>

@@ -2,8 +2,8 @@
   "name": "schroders-gci-2020",
   "version": "0.4.0",
   "private": true,
-  "homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/",
-  "_homepage": ".",
+  "_homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/",
+  "homepage": ".",
   "dependencies": {
     "@styled-system/theme-get": "^5.1.2",
     "abortcontroller-polyfill": "^1.4.0",
@@ -22,6 +22,7 @@
     "react-measure": "^2.3.0",
     "react-scripts": "^3.4.1",
     "react-sizeme": "^2.6.12",
+    "react-sticky": "^6.0.3",
     "react-tabs": "^3.1.1",
     "react-transition-group": "^4.4.1",
     "react-use": "^17.2.4",

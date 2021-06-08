@@ -9,7 +9,7 @@ import useResponsive from '../../../contexts/mediaQuery/useResponsive'
 
 import photo1 from './3-1.png'
 import photo2 from './3-2.png'
-import mobilephoto2 from './mobile-3-2.png'
+import mobile_photo2 from './mobile-3-2.png'
 
 const photo = [
   {
@@ -19,7 +19,7 @@ const photo = [
   },
   {
     src: photo2,
-    mobile_src: mobilephoto2,
+    mobile_src: mobile_photo2,
     // width: responsive('100%', '75%')
   }
 ]

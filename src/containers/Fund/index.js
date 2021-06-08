@@ -14,7 +14,7 @@ const Fund = () => {
   const [activeTab, setActiveTab] = useState(0)
 
   return (
-    <Container py={responsive('2.86em', '7.143em')}>
+    <Container pt={responsive('2.86em', '7.143em')}>
       <Box.Title>基金資料</Box.Title>
       <FundTabs selectedIndex={activeTab} onSelect={setActiveTab} />
     </Container>

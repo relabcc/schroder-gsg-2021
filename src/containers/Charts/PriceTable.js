@@ -40,7 +40,7 @@ const PriceTable = ({ isMobile }) => {
         return (
           <>
             <Table nowData={isMobile ? priceDataMobile : priceData} isMobile={isMobile} />
-            <Source>{note}</Source>
+            <Source mb="0">{note}</Source>
           </>
         )
       }}

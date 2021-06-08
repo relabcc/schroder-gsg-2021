@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Waypoint } from 'react-waypoint'
+import { StickyContainer, Sticky } from 'react-sticky';
 
 import useResponsive from '../contexts/mediaQuery/useResponsive'
 
@@ -13,7 +14,7 @@ const HomePage = () => {
   const { isMobile, isLaptop } = useResponsive()
   const [showSide, setShowSide] = useState(true)
   return (
-    <>
+    <StickyContainer>
       <Intro isLaptop={isLaptop} isMobile={isMobile} />
       <Sections isMobile={isMobile} />
       <Waypoint
@@ -24,9 +25,17 @@ const HomePage = () => {
         onLeave={({ currentPosition }) => currentPosition === 'below' && setShowSide(true)}
       />
       <Fund noSticky />
-      <BackToTop />
-      {/* {showSide && !isMobile && <SideInfo />} */}
-    </>
+      <Sticky bottomOffset={-880}>
+        {({
+          style,
+          isSticky,
+          distanceFromBottom,
+        }) => (
+          <BackToTop isSticky={isSticky} distanceFromBottom={distanceFromBottom} zIndex={999} />
+        )}
+      </Sticky>
+        {/* {showSide && !isMobile && <SideInfo />} */}
+    </StickyContainer>
   )
 }
 

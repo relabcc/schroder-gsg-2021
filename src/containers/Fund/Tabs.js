@@ -112,7 +112,7 @@ const FundTabs = ({ selectedIndex, onSelect, secPt, sticky }) => {
               <Box key={k}>
                 <Text.SubTitle color="darkGreen" pt={responsive('2rem', '3rem')} pb="2rem">{title}</Text.SubTitle>
                 <Comp isMobile={isMobile} />
-                {source && <Source>{source}</Source>}
+                {/* {source && <Source mb="0">{source}</Source>} */}
               </Box>
             ))}
           </TabPanel>

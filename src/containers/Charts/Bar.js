@@ -57,7 +57,7 @@ const CleanText = ({ children, x, y, style }) => (
 
 const barWidhth = (isMobile) => isMobile ? 22 : 24
 
-const Bar = ({ data, isMobile, max, colors }) => {
+const Bar = ({ data, isMobile, max, colors, labelColors }) => {
   return (
     <VictoryChart
       theme={chartTheme}
@@ -110,7 +110,7 @@ const Bar = ({ data, isMobile, max, colors }) => {
                 stroke: theme.colors.titleBlue,
               },
               labels: {
-                fill: theme.colors.numberGreen,
+                fill: labelColors[i],
                 fontSize: 18
               },
             }}

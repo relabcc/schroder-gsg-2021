@@ -36,9 +36,9 @@ const Intro = ({ isLaptop, isMobile }) => {
         backgroundPosition={responsive('50% 90%', '50% 90%', '100% 0%')}
       >
         <Container
-          pt={responsive('2em', '4em', '8em')}
+          pt={responsive('2em', '4em')}
           px={30}
-          pb={responsive('2em', '4em', '8em')}
+          pb={responsive('2em', '4em')}
           color="white"
         >
           <Flex alignItems="center" flexDirection={responsive('column', 'row')}>

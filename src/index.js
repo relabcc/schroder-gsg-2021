@@ -29,6 +29,8 @@ window.injectCSS = cssLink => {
 const getContianer = () => {
   const target = document.getElementById('gsg2021-tw-root');
   window.__video = target.querySelector('[data-bynder-widget]')
+  window.__btnBackToTop = target.querySelector('#backToTop')
+  window.__tabButtons = Array.from(target.querySelectorAll('.btn-carousel'))
   const found = find(document.querySelectorAll('.jumbotron'), (ele) => ele.contains(target));
   if (found.classList.contains('panel-white')) {
     found.classList.remove('panel-white')

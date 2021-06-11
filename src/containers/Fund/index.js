@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import 'react-tabs/style/react-tabs.css';
 
 import Container from '../../components/Container'
 import Box from '../../components/Box'
-import Title from '../../components/Title'
 import { responsive } from '../../components/ThemeProvider/theme'
 
 // import Flex from '../../components/Flex'

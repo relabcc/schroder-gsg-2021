@@ -1,11 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import themeGet from '@styled-system/theme-get';
 
 import Box from '../../components/Box'
-import Source from '../../components/Source'
 import Text from '../../components/Text'
 import Sticky from '../../components/Sticky'
 // import Container from '../../components/Container'
@@ -13,11 +12,7 @@ import { responsive } from '../../components/ThemeProvider/theme'
 
 import useResponsive from '../../contexts/mediaQuery/useResponsive'
 
-import Allocation from '../Charts/Allocation'
-import Price from '../Charts/Price'
 import PriceTable from '../Charts/PriceTable'
-import USDividendsTable from '../Charts/USDividendsTable'
-import SADividendsTable from '../Charts/SADividendsTable'
 import BarChart from '../Charts/BarChart';
 
 const StyledTabs = styled(Tabs)`
@@ -69,11 +64,6 @@ const sets = [
         title: '基金累積績效',
         Comp: PriceTable,
       },
-      // {
-      //   title: '淨值走勢',
-      //   Comp: Price,
-      //   source: '資料來源：施羅德投資。'
-      // },
     ]
   },
 ]
@@ -84,28 +74,25 @@ const FundTabs = ({ selectedIndex, onSelect, secPt, sticky }) => {
   return (
     <StyledTabs
       selectedIndex={selectedIndex}
-      onSelect={(i) => {
-        onSelect(i)
-        // window.gaTrackClick(sets[i].name)
-        if (isMobile) {
-          window.scrollBy({ top: block.current.getBoundingClientRect().top - 40 })
-        }
-      }}
+      onSelect={onSelect}
     >
       <Box is={sticky || isMobile ? Sticky : 'div'}>
         <Box mx={responsive(-10, 0)}>
           <StyleTabList>
-            {sets.map(({ name }) => (
-              <StyleTab key={name} width={1 / sets.length} data-name={name} className="data-tabs">{name}</StyleTab>
+            {sets.map(({ name }, i) => (
+              <StyleTab
+                key={name}
+                width={1 / sets.length}
+                onClick={() => {
+                  const mapper = window.__tabButtons?.[i]
+                  if (mapper) mapper.click()
+                }}
+              >{name}</StyleTab>
             ))}
           </StyleTabList>
         </Box>
       </Box>
       <div ref={block}>
-        {/* <Box pt="5rem" fontWeight="bold" fontSize={responsive('1.43em', '2em')} color="prussianBlue">
-          <Text>施羅德(環)環球收息債券</Text>
-          <Text>(本基金有相當比重投資於非投資等級之高風險債券且基金之配息來源可能為本金)</Text>
-        </Box> */}
         {sets.map(({ data }, i) => (
           <TabPanel key={i}>
             {data.map(({ title, Comp, source }, k) =>(

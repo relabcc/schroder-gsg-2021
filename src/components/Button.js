@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import {
   typography,
@@ -60,15 +60,15 @@ const ButtonBase = styled(tag)`
 
 const InButtonSpan = props => <Box is="span" {...props} />;
 
-const Button = ({
+const Button = forwardRef(({
   leftIcon,
   rightIcon,
   iconSpacing,
   children,
   verticalAlign,
   ...props
-}) => (
-  <ButtonBase {...props}>
+}, ref) => (
+  <ButtonBase {...props} ref={ref}>
     {leftIcon ? (
       <Box is={leftIcon} mr={iconSpacing} verticalAlign={verticalAlign} />
     ) : null}
@@ -77,7 +77,7 @@ const Button = ({
       <Box is={rightIcon} ml={iconSpacing} verticalAlign={verticalAlign} />
     ) : null}
   </ButtonBase>
-);
+));
 
 Button.defaultProps = {
   blacklist,
@@ -121,7 +121,6 @@ Button.secondary = props => (
   />
 );
 
-
 Button.white = props => (
   <Button
     bg="white"
@@ -156,7 +155,7 @@ Button.outline.danger = props => (
   />
 );
 
-Button.transparent = props => (
+Button.transparent = forwardRef((props, ref) => (
   <Button
     border="1px solid"
     borderColor="transparent"
@@ -165,9 +164,10 @@ Button.transparent = props => (
     hoverBg="transparent"
     hoverBorder="transparent"
     hoverColor="primary"
+    ref={ref}
     {...props}
   />
-);
+));
 
 Button.darkGreen = props => (
   <Button

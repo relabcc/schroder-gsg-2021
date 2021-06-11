@@ -1,6 +1,9 @@
 <div id="gsg2021-tw-root">
 <div>
 <div data-bynder-widget="video-item" data-media-id="802B2B73-DFBD-4434-A22DDFED7EA85B7A" data-width="" data-autoplay="true"><script id="bynder-widgets-js" data-account-url="mybrand.schroders.com" data-language="en" src="https://d8ejoa1fys2rk.cloudfront.net/bynder-embed/latest/bynder-embed.js"></script></div>
+<div class="btn" id="backToTop"><span>返回頂端</span></div>
+<div class="btn btn-tabs">投資組合</div>
+<div class="btn btn-tabs">基金績效</div>
 </div>
 
 <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/runtime-main.d0111ffb.js"></script>

@@ -28,15 +28,15 @@ import icon2_3_1 from './2-3-1.png'
 
 const sets = [
   {
-    label: '聚焦永續的三大選股方向',
+    label: '聚焦三大永續主題',
     src: icon2_1
   },
   {
-    label: '永續投資策略',
+    label: '獨家永續投資流程',
     src: icon2_2
   },
   {
-    label: '永續團隊與\n主動參與的投資角色',
+    label: '專業團隊分工管理',
     src: icon2_3
   },
 ]

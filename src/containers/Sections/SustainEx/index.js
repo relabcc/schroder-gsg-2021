@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '../../../components/Container'
 import Box from '../../../components/Box'
+import Title from '../../../components/Title'
 import Image from '../../../components/Image'
 import Text from '../../../components/Text'
 import { responsive } from '../../../components/ThemeProvider/theme'
@@ -29,8 +30,8 @@ const SustainEx = ({ innerRef }) => {
 
   return (
     <Box ref={innerRef}>
-      <Container py={responsive('2.86em', '7.143em')}>
-        <Box.Title>獨家量化分析工具－SustainEx</Box.Title>
+      <Title mb="2rem" titleColor="white" py="3.75em" title="獨家量化分析工具－SustainEx" bg="darkGreen" />
+      <Container>
         <Text.Desc>以量化來評估企業在各個面向對外部性的影響，透過SustainEx模組分析並給予永續評分。作為投資團隊管理投資組合的重要依據之一。</Text.Desc>
         {photo.map((d, i) => (
           <Box mx="auto" width={responsive('100%', '75%')} mt={responsive('1em', '2em')} key={i}>

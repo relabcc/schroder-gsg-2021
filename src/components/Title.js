@@ -20,9 +20,10 @@ const Title = ({ src, step, title, titleColor, titleFontSize, ...props }) => {
           <Flex
             fontWeight="bold"
             flexDirection={responsive('column', 'row')}
-            ml={responsive('0.86em', '1.86em')} >
+            alignItems={responsive('flex-start', 'center')}
+            ml={src && responsive('0.86em', '1.86em')} >
             {step && <Text.SubTitle color="darkBlue">特色{step}</Text.SubTitle>}
-            <Text.SubTitle ml={responsive(0, '0.5em')} fontSize={titleFontSize} color={titleColor || "darkGreen"}>{title}</Text.SubTitle>
+            <Text.SubTitle ml={step && responsive(0, '0.5em')} titleFontSize={titleFontSize} color={titleColor || "darkGreen"}>{title}</Text.SubTitle>
           </Flex>
         </Flex>
       </Container>

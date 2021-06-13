@@ -1,5 +1,5 @@
 import React from 'react'
-import { Provider } from 'use-http';
+import { SWRConfig } from 'swr';
 
 const BASE_URL = 'https://us-central1-re-drive-75970.cloudfunctions.net/app/schrodersGSG'
 
@@ -7,8 +7,12 @@ const BASE_URL = 'https://us-central1-re-drive-75970.cloudfunctions.net/app/schr
 // dividends/:name
 // allocation
 
-export default ({ children, options }) => (
-  <Provider url={BASE_URL} options={options}>
+export default ({ children }) => (
+  <SWRConfig
+    value={{
+      fetcher: (resource, init) => fetch(BASE_URL + resource, init).then(res => res.json())
+    }}
+  >
     {children}
-  </Provider>
+  </SWRConfig>
 )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Container from '../../components/Container'
 import Box from '../../components/Box'
@@ -8,8 +8,9 @@ import { responsive } from '../../components/ThemeProvider/theme'
 
 import FundTabs from './Tabs'
 
-const Fund = () => {
+const Fund = ({ onLoad }) => {
   const [activeTab, setActiveTab] = useState(0)
+  useEffect(() => onLoad(), [])
 
   return (
     <Container pt={responsive('2.86em', '7.143em')}>

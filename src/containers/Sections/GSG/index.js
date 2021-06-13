@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Container from '../../../components/Container'
 import Box from '../../../components/Box'
 import Image from '../../../components/Image'
@@ -91,10 +91,11 @@ const sections = [
   },
 ]
 
-const ESG = ({ innerRef }) => {
+const ESG = ({ onLoad }) => {
   const { isMobile } = useResponsive()
+  useEffect(() => onLoad(), [])
   return (
-    <Box ref={innerRef}>
+    <Box>
       <Container pt={responsive('2em', '3em')}>
         {sections.map(({ title, desc, content, source, logoWidth, subtitle }, i) => (
           <Box mt={i && '3em'} key={i}>

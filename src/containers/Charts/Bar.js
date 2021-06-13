@@ -49,12 +49,6 @@ const chartTheme = merge({}, VictoryTheme.grayscale, {
   }
 })
 
-const CleanText = ({ children, x, y, style }) => (
-  <text x={x} y={y} style={style}>
-    {children}
-  </text>
-)
-
 const barWidhth = (isMobile) => isMobile ? 22 : 24
 
 const Bar = ({ data, isMobile, max, colors, labelColors }) => {

@@ -4,7 +4,6 @@ import Box from '../../components/Box'
 import { responsive } from '../../components/ThemeProvider/theme'
 
 const Table = ({ nowData, thAlign, tbodyAlign, fontSize = '1.143em', bg = 'darkGreen', noMobile }) => {
-  const getStripBg = useCallback((i) => i % 2 ? 'lightGray' : 'white', [])
   const getResponsive = useCallback((mobile, desk) => noMobile ? desk : responsive(mobile, desk), [noMobile])
   return (
     <Box is="table" fontSize={fontSize}>

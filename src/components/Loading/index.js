@@ -24,11 +24,11 @@ const Loader = styled.div`
 
 export default function Loading({ text, ...props }) {
   return (
-    <Box {...props}>
+    <Box textAlign="center" {...props}>
       <Loader>
         <Image src={lens} />
       </Loader>
-      <Text mt="1em">{text}</Text>
+      <Text fontSize="1em" mt="1em">{text}</Text>
     </Box>
   );
 }
@@ -39,5 +39,5 @@ Loading.propTypes = {
 
 Loading.defaultProps = {
   text: 'Loading...',
-  width: '4.5em',
+  width: '5em',
 };

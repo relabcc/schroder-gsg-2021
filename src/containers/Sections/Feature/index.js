@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { isArray } from 'lodash'
 
 import Container from '../../../components/Container'
@@ -117,11 +117,12 @@ const data = [
   }
 ]
 
-const Feature = ({ innerRef }) => {
+const Feature = ({ onLoad }) => {
   const { isMobile } = useResponsive()
+  useEffect(() => onLoad(), [])
 
   return (
-    <Box ref={innerRef}>
+    <Box>
       <Container pb="3em">
         <Box.Title>施羅德(環)環球永續增長基金三大特色</Box.Title>
         <Module bigTitle bigText content={sets} logoWidth={responsive('6.428em', '65%')} />

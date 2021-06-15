@@ -14,9 +14,6 @@ import MediaProvider from './contexts/mediaQuery/MediaProvider'
 import DataProvider from './contexts/data/DataProvider'
 import App from './App';
 
-// import './modernizr-custom'
-import './gaTracks'
-
 smoothscroll.polyfill();
 
 window.injectCSS = cssLink => {

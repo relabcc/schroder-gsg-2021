@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Container from '../../../components/Container'
 import Box from '../../../components/Box'
 import Title from '../../../components/Title'
@@ -25,11 +25,12 @@ const photo = [
   }
 ]
 
-const SustainEx = ({ innerRef }) => {
+const SustainEx = ({ onLoad }) => {
   const { isMobile } = useResponsive()
+  useEffect(() => onLoad(), [])
 
   return (
-    <Box ref={innerRef}>
+    <Box>
       <Title
         titleFontSize={responsive('2.4rem', '3.6rem')}
         mb="2rem"

@@ -6,11 +6,11 @@
 <div class="btn btn-tabs">基金績效</div>
 </div>
 
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/runtime-main.d0111ffb.js"></script>
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/5.48ece0ee.chunk.js"></script>
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/main.8587da43.chunk.js"></script>
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/runtime-main.ee930a08.js"></script>
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/3.13dd70b6.chunk.js"></script>
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/main.ec4517fb.chunk.js"></script>
 <script>
-setTimeout(function() { window.injectCSS("/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/css/2.5c17b9f1.chunk.css") })
+setTimeout(function() { window.injectCSS("/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/css/4.5c17b9f1.chunk.css") })
 </script>
 <div>　</div>
 </div>

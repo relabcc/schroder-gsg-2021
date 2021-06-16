@@ -19,7 +19,7 @@ const Intro = ({ onLoad }) => {
       >
         <Flex alignItems="center" flexDirection={responsive('column', 'row')}>
           <Box>
-            <Text fontSize={responsive('2em', '2.5em', '2.75em')} fontWeight="900">除了獲利 更能受益</Text>
+            <Text fontSize={responsive('2em', '2.5em', '2.75em')} fontWeight="900">追求獲利 同時讓世界受益</Text>
             <Text my="1em" fontSize={responsive('1.25em', '1.5em', '1.75em')}>
               投資不僅可追求財富增長，更能對世界發揮影響力。<br />
               我們相信永續投資追求的不僅是獲利，更能讓社會受益。

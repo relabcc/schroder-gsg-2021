@@ -8,7 +8,7 @@
 
 <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/runtime-main.fb01c97a.js"></script>
 <script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/3.411e3605.chunk.js"></script>
-<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/main.ef694903.chunk.js"></script>
+<script src="/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/js/main.5c3b6f66.chunk.js"></script>
 <script>
 setTimeout(function() { window.injectCSS("/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/static/css/4.5c17b9f1.chunk.css") })
 </script>

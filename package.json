@@ -2,8 +2,8 @@
   "name": "schroders-gci-2020",
   "version": "0.4.0",
   "private": true,
-  "_homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/",
-  "homepage": ".",
+  "homepage": "https://www.schroders.com/zh-tw/sysglobalassets/staticfiles/campaigns/taiwan/2021-GSG/",
+  "_homepage": ".",
   "dependencies": {
     "@styled-system/theme-get": "^5.1.2",
     "abortcontroller-polyfill": "^1.4.0",

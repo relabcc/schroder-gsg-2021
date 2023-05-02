@@ -91,9 +91,8 @@ const sections = [
   },
 ]
 
-const ESG = ({ onLoad }) => {
+const ESG = () => {
   const { isMobile } = useResponsive()
-  useEffect(() => onLoad(), [])
   return (
     <Box>
       <Container pt={responsive('2em', '3em')}>

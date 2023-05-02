@@ -8,7 +8,7 @@ import Text from '../../components/Text'
 import { responsive } from '../../components/ThemeProvider/theme'
 import Video from './Video'
 
-const Intro = ({ onLoad }) => {
+const Intro = () => {
   return (
     <Box bg="darkGreen">
       <Container
@@ -26,7 +26,7 @@ const Intro = ({ onLoad }) => {
             </Text>
           </Box>
           <Box width={responsive(1, 1 / 2)} ml={responsive(0, '3rem')}>
-            <Video onLoad={onLoad} />
+            <Video />
           </Box>
         </Flex>
       </Container>

@@ -25,9 +25,8 @@ const photo = [
   }
 ]
 
-const SustainEx = ({ onLoad }) => {
+const SustainEx = () => {
   const { isMobile } = useResponsive()
-  useEffect(() => onLoad(), [])
 
   return (
     <Box>

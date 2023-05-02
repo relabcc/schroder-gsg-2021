@@ -117,9 +117,8 @@ const data = [
   }
 ]
 
-const Feature = ({ onLoad }) => {
+const Feature = () => {
   const { isMobile } = useResponsive()
-  useEffect(() => onLoad(), [])
 
   return (
     <Box>

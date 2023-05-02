@@ -8,9 +8,8 @@ import { responsive } from '../../components/ThemeProvider/theme'
 
 import FundTabs from './Tabs'
 
-const Fund = ({ onLoad }) => {
+const Fund = () => {
   const [activeTab, setActiveTab] = useState(0)
-  useEffect(() => onLoad(), [])
 
   return (
     <Container pt={responsive('2.86em', '7.143em')}>

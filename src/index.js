@@ -23,17 +23,14 @@ const getContianer = () => {
 };
 
 setTimeout(() => {
-  if (!window._RE_INITED_) {
-    ReactDOM.render(
-      <ThemeProvider>
-        <MediaProvider>
-          <DataProvider>
-            <App />
-          </DataProvider>
-        </MediaProvider>
-      </ThemeProvider>,
-      getContianer()
-    );
-    window._RE_INITED_ = true;
-  }
+  ReactDOM.render(
+    <ThemeProvider>
+      <MediaProvider>
+        <DataProvider>
+          <App />
+        </DataProvider>
+      </MediaProvider>
+    </ThemeProvider>,
+    getContianer()
+  );
 });

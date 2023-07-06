@@ -31,10 +31,10 @@ const SustainEx = () => {
   return (
     <Box>
       <Title
-        titleFontSize={responsive('2.4rem', '3.6rem')}
-        mb="2rem"
+        titleFontSize={responsive('2.4em', '3.6em')}
+        mb="2em"
         titleColor="white"
-        py={responsive('5rem', '4.75rem')}
+        py={responsive('5em', '4.75em')}
         title="獨家量化分析工具－SustainEx"
         bg="darkGreen"
       />

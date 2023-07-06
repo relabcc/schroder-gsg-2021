@@ -6,4 +6,8 @@ export default createGlobalStyle`
     pointer-events: auto !important;
     touch-action: auto !important;
   }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 `;

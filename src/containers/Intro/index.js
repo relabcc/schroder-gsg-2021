@@ -10,10 +10,9 @@ import Video from './Video'
 
 const Intro = () => {
   return (
-    <Box bg="darkGreen">
+    <Box.Extended bg="darkGreen">
       <Container
         pt={responsive('2em', '4em')}
-        px={30}
         pb={responsive('2em', '4em')}
         color="white"
       >
@@ -25,12 +24,12 @@ const Intro = () => {
               我們相信永續投資追求的不僅是獲利，更能讓社會受益。
             </Text>
           </Box>
-          <Box width={responsive(1, 1 / 2)} ml={responsive(0, '3rem')}>
+          <Box width={responsive(1, 1 / 2)} ml={responsive(0, '3em')}>
             <Video />
           </Box>
         </Flex>
       </Container>
-    </Box>
+    </Box.Extended>
   )
 }
 

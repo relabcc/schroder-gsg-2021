@@ -28,7 +28,7 @@ const Text = styled(tag)`
 
 Text.defaultProps = {
   is: 'p',
-  fontSize: responsive('1.6rem', '2rem'),
+  fontSize: responsive('1.6em', '2em'),
   lineHeight: 1.5,
   blacklist,
 };
@@ -36,11 +36,11 @@ Text.defaultProps = {
 Text.inline = (props) => <Text is="span" {...props} />;
 Text.bold = (props) => <Text fontWeight="bold" {...props} />;
 Text.thin = (props) => <Text fontWeight="200" {...props} />;
-Text.Desc = (props) => <Text fontWeight="500" fontSize={responsive('1.8rem', '2.4rem')} {...props} />;
-Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="900" color="titleBlue" fontSize={responsive('2.4rem', '3.6rem')} {...props} />)
-Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" color="darkGreen" fontSize={props.titleFontSize || responsive('2rem', '2.8rem')} {...props} />)
+Text.Desc = (props) => <Text fontWeight="500" fontSize={responsive('1.8em', '2.4em')} {...props} />;
+Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="900" color="titleBlue" fontSize={responsive('2.4em', '3.6em')} {...props} />)
+Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" color="darkGreen" fontSize={props.titleFontSize || responsive('2em', '2.8em')} {...props} />)
 Text.ModuleTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" {...props} />)
-Text.SmallTitle = forwardRef((props, ref) => <Text ref={ref} fontWeight="bold" fontSize={responsive('1.8rem', '2.4rem')} {...props} />)
+Text.SmallTitle = forwardRef((props, ref) => <Text ref={ref} fontWeight="bold" fontSize={responsive('1.8em', '2.4em')} {...props} />)
 
 range(1, 7).forEach((key) => {
   const h = `h${key}`;

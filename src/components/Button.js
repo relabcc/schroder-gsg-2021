@@ -178,8 +178,8 @@ Button.darkGreen = props => (
     borderRadius="0"
     hoverBorder="primary"
     hoverColor="ceruleanBlue"
-    fontSize={responsive('2rem', '2.6rem')}
-    py="1.875rem"
+    fontSize={responsive('2em', '2.6em')}
+    py="1.875em"
     hoverBg="primary"
     {...props}
   />

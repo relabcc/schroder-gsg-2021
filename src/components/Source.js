@@ -7,7 +7,7 @@ const Source = ({ children, ...props }) => {
   return (
     <Box
       mt="1.5em"
-      mb={responsive('8.5em', '10em')}
+      mb={responsive('4.5em', '5em')}
       borderTop="1px solid"
       pt="1em"
       textAlign="justify"

@@ -36,7 +36,7 @@ Text.defaultProps = {
 Text.inline = (props) => <Text is="span" {...props} />;
 Text.bold = (props) => <Text fontWeight="bold" {...props} />;
 Text.thin = (props) => <Text fontWeight="200" {...props} />;
-Text.Desc = (props) => <Text fontWeight="500" fontSize={responsive('1.8em', '2.4em')} {...props} />;
+Text.Desc = (props) => <Text fontWeight="500" fontSize={responsive('1.75em', '2.15em')} {...props} />;
 Text.Title = forwardRef((props, ref) => <Text ref={ref} fontWeight="900" color="titleBlue" fontSize={responsive('2.4em', '3.6em')} {...props} />)
 Text.SubTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" color="darkGreen" fontSize={props.titleFontSize || responsive('2em', '2.8em')} {...props} />)
 Text.ModuleTitle = forwardRef((props, ref) => <Text.Title ref={ref} fontWeight="bold" {...props} />)

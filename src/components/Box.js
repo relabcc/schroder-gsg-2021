@@ -86,8 +86,9 @@ Box.Extended = forwardRef((props, ref) => (
   <Box
     ref={ref}
     {...props}
-    px={["calc((100vw - 100%) / 2)", null, null, null, null, "75px"]}
-    mx={["calc((100% - 100vw) / 2)", null, null, null, null, "-75px"]}
+    px={responsive("calc((100vw - 100%) / 2)", "16px")}
+    mx={responsive("calc((100% - 100vw) / 2)", "0")}
+    borderRadius={responsive(0, "14px")}
   />
 ));
 

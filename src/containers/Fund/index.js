@@ -13,7 +13,7 @@ const Fund = () => {
 
   return (
     <Container pt={responsive('2.86em', '7.143em')}>
-      <Box.Title>基金資料</Box.Title>
+      <Box.Title>基金累積績效</Box.Title>
       <FundTabs selectedIndex={activeTab} onSelect={setActiveTab} />
     </Container>
   )

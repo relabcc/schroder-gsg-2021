@@ -38,35 +38,37 @@ const mount = () => {
 };
 
 if (process.env.NODE_ENV === "development") {
-  const container = document.getElementById("gsg2021-tw-root");
+  setTimeout(() => {
+    mount();
+  }, 1000);
 
-  const attachObserver = (element) => {
-    if (element.parentElement && element.parentElement !== document.body) {
-      const callback = (mutationList, observer) => {
-        for (const mutation of mutationList) {
-          // console.log(mutation);
-          if (mutation.type === "childList") {
-            if (
-              Array.from(mutation.addedNodes).some((node) =>
-                node.innerHTML.includes("gsg2021-tw-root")
-              )
-            ) {
-              console.log("container added");
-              mount();
-            }
-          }
-        }
-      };
-      // Create an observer instance linked to the callback function
-      const observer = new MutationObserver(callback);
-      const config = { childList: true };
+  // const attachObserver = (element) => {
+  //   if (element.parentElement && element.parentElement !== document.body) {
+  //     const callback = (mutationList, observer) => {
+  //       for (const mutation of mutationList) {
+  //         console.log(mutation);
+  //         if (mutation.type === "childList") {
+  //           if (
+  //             Array.from(mutation.addedNodes).some((node) =>
+  //               node.innerHTML.includes("gsg2021-tw-root")
+  //             )
+  //           ) {
+  //             console.log("container added");
+  //             mount();
+  //           }
+  //         }
+  //       }
+  //     };
+  //     // Create an observer instance linked to the callback function
+  //     const observer = new MutationObserver(callback);
+  //     const config = { childList: true };
 
-      // Start observing the target node for configured mutations
-      observer.observe(element.parentElement, config);
-      attachObserver(element.parentElement);
-    }
-  };
-  attachObserver(container);
+  //     // Start observing the target node for configured mutations
+  //     observer.observe(element.parentElement, config);
+  //     attachObserver(element.parentElement);
+  //   }
+  // };
+  // attachObserver(container);
 } else {
   mount();
 }

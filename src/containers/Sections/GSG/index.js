@@ -125,7 +125,7 @@ const ESG = () => {
             <Image src={isMobile ? mobile_chart : chart} />
           </Box>
           <Source>
-            資料來源：Lipper, USD, as of 2021/4/30. 本基金參考指標為MSCI AC
+            資料來源：Lipper, USD, as of 2023/6/30. 本基金參考指標為MSCI AC
             World Index.
           </Source>
         </Box>

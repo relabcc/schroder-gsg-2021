@@ -12,13 +12,13 @@ const HomePage = () => {
   return (
     <Box
       color="#002a5e"
-      fontSize="14px"
+      fontSize="12px"
       fontFamily={`"Microsoft JhengHei", "Noto Sans", Arial, sans-serif`}
     >
       <Intro isLaptop={isLaptop} isMobile={isMobile} />
-      <Box fontSize="12px">
+      <Box fontSize="10px">
         <Sections isMobile={isMobile} />
-        <Fund />
+        {/* <Fund /> */}
       </Box>
     </Box>
   );

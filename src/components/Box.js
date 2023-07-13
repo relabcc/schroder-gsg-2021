@@ -74,7 +74,6 @@ Box.Title = forwardRef(({ children, ...props }, ref) => (
     ref={ref}
     pb="0.25em"
     mb="2em"
-    borderBottom={responsive("5px solid", "10px solid")}
     color="titleBlue"
     {...props}
   >

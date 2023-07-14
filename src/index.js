@@ -15,7 +15,7 @@ import HomePage from "./containers/HomePage";
 const mount = () => {
   setTimeout(() => {
     document.querySelectorAll(".gsg2021-tw-root").forEach((el, index) => {
-      if (index > 2) return;
+      if (index > 3) return;
       ReactDOM.render(
         <ThemeProvider>
           <MediaProvider>

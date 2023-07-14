@@ -17,7 +17,10 @@ const Sections = ({ section }) => {
   return (
     <Box id="fund-head" pt={responsive(0, "2em")}>
       {secs.map(
-        ({ Comp, name }, i) => section - 1 === i && <Comp key={name} />
+        ({ Comp, name }, i) =>
+          (section - 2 === i || (i === 0 && section === 1)) && (
+            <Comp key={name} section={section} />
+          )
       )}
     </Box>
   );

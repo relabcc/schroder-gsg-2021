@@ -91,33 +91,34 @@ const sections = [
   },
 ];
 
-const ESG = () => {
+const ESG = ({ section }) => {
   const { isMobile } = useResponsive();
   return (
     <Box>
       <Container pt={responsive("2em", "3em")}>
         {sections.map(
-          ({ title, desc, content, source, logoWidth, subtitle }, i) => (
-            <Box mt={i && "3em"} key={i}>
-              <Box
-                maxWidth={responsive("auto", "66.66%")}
-                mx="auto"
-                mb="4em"
-                textAlign={responsive("left", "center")}
-              >
-                <Box.Title>{title}</Box.Title>
-                <Text.Desc whiteSpace="pre-wrap">{desc}</Text.Desc>
+          ({ title, desc, content, source, logoWidth, subtitle }, i) =>
+            section === i + 1 && (
+              <Box mt={i && "3em"} key={i}>
+                <Box
+                  maxWidth={responsive("auto", "66.66%")}
+                  mx="auto"
+                  mb="4em"
+                  textAlign={responsive("left", "center")}
+                >
+                  <Box.Title>{title}</Box.Title>
+                  <Text.Desc whiteSpace="pre-wrap">{desc}</Text.Desc>
+                </Box>
+                {subtitle && <Text.SubTitle mt="1em">{subtitle}</Text.SubTitle>}
+                <Module
+                  content={content}
+                  logoWidth={logoWidth}
+                  bigTitle
+                  bigText
+                />
+                <Source>{source}</Source>
               </Box>
-              {subtitle && <Text.SubTitle mt="1em">{subtitle}</Text.SubTitle>}
-              <Module
-                content={content}
-                logoWidth={logoWidth}
-                bigTitle
-                bigText
-              />
-              <Source>{source}</Source>
-            </Box>
-          )
+            )
         )}
         <Box mt="2em">
           <Text.SubTitle>亮眼的投資表現</Text.SubTitle>

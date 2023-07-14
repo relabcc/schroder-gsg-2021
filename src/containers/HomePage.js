@@ -4,10 +4,9 @@ import useResponsive from "../contexts/mediaQuery/useResponsive";
 
 import Intro from "./Intro";
 import Sections from "./Sections";
-import Fund from "./Fund";
 import Box from "../components/Box";
 
-const HomePage = () => {
+const HomePage = ({ section }) => {
   const { isMobile, isLaptop } = useResponsive();
   return (
     <Box
@@ -15,10 +14,9 @@ const HomePage = () => {
       fontSize="12px"
       fontFamily={`"Microsoft JhengHei", "Noto Sans", Arial, sans-serif`}
     >
-      <Intro isLaptop={isLaptop} isMobile={isMobile} />
+      {section === 1 && <Intro isLaptop={isLaptop} isMobile={isMobile} />}
       <Box fontSize="10px">
-        <Sections isMobile={isMobile} />
-        {/* <Fund /> */}
+        <Sections isMobile={isMobile} section={section} />
       </Box>
     </Box>
   );

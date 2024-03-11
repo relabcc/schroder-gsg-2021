@@ -62,7 +62,7 @@ mount = (init) => {
   };
   setTimeout(() => {
     document.querySelectorAll(`.${key}`).forEach((el, index) => {
-      if (index > 3) return;
+      if (index >= 3) return;
       render(el, index);
     });
   });
